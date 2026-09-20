@@ -3,13 +3,12 @@ using UnityEngine;
 namespace RiftArena.Input
 {
     /// <summary>
-    /// Production control scheme for Player 1. This is the scheme that will later be
-    /// replaced by network-driven input in MVP1.5 — keep it exactly as specified:
-    ///   Arrow Left / Arrow Right = walk (X axis)
-    ///   Q / E = move back / forward (Z axis)
-    ///   Arrow Up = jump
-    ///   W = Light Punch, A = Heavy Punch
-    ///   (S / D reserved for Light Kick / Heavy Kick in MVP2 — intentionally unwired)
+    /// Production control scheme, shared by both players now that each will read
+    /// input on their own local machine once network play (MVP1.5) is wired up:
+    ///   W / S = move forward / back (Z axis)
+    ///   A / D = move left / right (X axis)
+    ///   Space = jump
+    ///   J = Light Punch, K = Block
     /// </summary>
     public class PlayerOneInputReader : IInputReader
     {
@@ -17,26 +16,23 @@ namespace RiftArena.Input
         public float MoveAxisForward { get; private set; }
         public bool JumpPressed { get; private set; }
         public bool LightPunchPressed { get; private set; }
-        public bool HeavyPunchPressed { get; private set; }
+        public bool BlockPressed { get; private set; }
 
         public void Tick()
         {
             float axis = 0f;
-            if (UnityEngine.Input.GetKey(KeyCode.LeftArrow)) axis -= 1f;
-            if (UnityEngine.Input.GetKey(KeyCode.RightArrow)) axis += 1f;
+            if (UnityEngine.Input.GetKey(KeyCode.A)) axis -= 1f;
+            if (UnityEngine.Input.GetKey(KeyCode.D)) axis += 1f;
             MoveAxis = axis;
 
             float axisForward = 0f;
-            if (UnityEngine.Input.GetKey(KeyCode.Q)) axisForward -= 1f;
-            if (UnityEngine.Input.GetKey(KeyCode.E)) axisForward += 1f;
+            if (UnityEngine.Input.GetKey(KeyCode.S)) axisForward -= 1f;
+            if (UnityEngine.Input.GetKey(KeyCode.W)) axisForward += 1f;
             MoveAxisForward = axisForward;
 
-            JumpPressed = UnityEngine.Input.GetKeyDown(KeyCode.UpArrow);
-            LightPunchPressed = UnityEngine.Input.GetKeyDown(KeyCode.W);
-            HeavyPunchPressed = UnityEngine.Input.GetKeyDown(KeyCode.A);
-
-            // S (Light Kick) and D (Heavy Kick) are reserved for MVP2 and intentionally
-            // left unread here.
+            JumpPressed = UnityEngine.Input.GetKeyDown(KeyCode.Space);
+            LightPunchPressed = UnityEngine.Input.GetKeyDown(KeyCode.J);
+            BlockPressed = UnityEngine.Input.GetKeyDown(KeyCode.K);
         }
     }
 }

@@ -1,37 +1,40 @@
 using UnityEngine;
 
+using UnityEngine;
+
 namespace RiftArena.Input
 {
     // DEBUG ONLY — MVP1 local testing stand-in for Player 2.
     // Replaced by network input in MVP1.5. Do not ship.
     //
-    // Lets one person test both sides of a match on a single keyboard while there is
-    // no networking yet:
-    //   J / L = walk left/right
-    //   I = jump
-    //   U = Light Punch, O = Heavy Punch
+    // Separate scheme from Player One so both can be tested on one keyboard:
+    //   Up / Down Arrow = move forward / back (Z axis)
+    //   Left / Right Arrow = move left / right (X axis)
+    //   Right Shift = jump
+    //   Comma = Light Punch, Period = Block
     public class PlayerTwoDebugInputReader : IInputReader
     {
         public float MoveAxis { get; private set; }
-
-        // Not wired for the P2 debug stand-in - forward/back movement was only
-        // requested for Player One. Always 0 so P2 stays on the old X-only behavior.
-        public float MoveAxisForward => 0f;
-
+        public float MoveAxisForward { get; private set; }
         public bool JumpPressed { get; private set; }
         public bool LightPunchPressed { get; private set; }
-        public bool HeavyPunchPressed { get; private set; }
+        public bool BlockPressed { get; private set; }
 
-        public void Tick()
+       public void Tick()
         {
             float axis = 0f;
-            if (UnityEngine.Input.GetKey(KeyCode.J)) axis -= 1f;
-            if (UnityEngine.Input.GetKey(KeyCode.L)) axis += 1f;
+            if (UnityEngine.Input.GetKey(KeyCode.LeftArrow)) axis -= 1f;
+            if (UnityEngine.Input.GetKey(KeyCode.RightArrow)) axis += 1f;
             MoveAxis = axis;
 
-            JumpPressed = UnityEngine.Input.GetKeyDown(KeyCode.I);
-            LightPunchPressed = UnityEngine.Input.GetKeyDown(KeyCode.U);
-            HeavyPunchPressed = UnityEngine.Input.GetKeyDown(KeyCode.O);
+            float axisForward = 0f;
+            if (UnityEngine.Input.GetKey(KeyCode.DownArrow)) axisForward -= 1f;
+            if (UnityEngine.Input.GetKey(KeyCode.UpArrow)) axisForward += 1f;
+            MoveAxisForward = axisForward;
+
+            JumpPressed = UnityEngine.Input.GetKeyDown(KeyCode.RightShift);
+            LightPunchPressed = UnityEngine.Input.GetKeyDown(KeyCode.Comma);
+            BlockPressed = UnityEngine.Input.GetKeyDown(KeyCode.Period);
         }
     }
 }

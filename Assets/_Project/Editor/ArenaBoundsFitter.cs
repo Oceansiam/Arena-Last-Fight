@@ -54,7 +54,7 @@ namespace RiftArena.EditorTools
                 return;
             }
 
-            Fighter[] fighters = Object.FindObjectsByType<Fighter>(FindObjectsSortMode.None);
+            Fighter[] fighters = Object.FindObjectsByType<Fighter>(FindObjectsInactive.Exclude);
             if (fighters.Length == 0)
             {
                 Debug.LogError("[ArenaBoundsFitter] No Fighter components found in the scene.");

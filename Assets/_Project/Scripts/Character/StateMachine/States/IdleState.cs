@@ -30,10 +30,9 @@ namespace RiftArena.Character.States
                 return;
             }
 
-            if (input.HeavyPunchPressed)
+            if (input.BlockPressed)
             {
-                fighter.AttackState.SetMove(fighter.HeavyPunchMove);
-                fighter.Machine.ChangeState(fighter.AttackState);
+                fighter.Machine.ChangeState(fighter.BlockState);
                 return;
             }
 

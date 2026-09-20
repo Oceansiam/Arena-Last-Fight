@@ -36,11 +36,6 @@ namespace RiftArena.EditorTools
                 startup: 4, active: 2, recovery: 7,
                 description: "Fast jab. Low damage, small knockback.");
 
-            MoveData heavyPunch = CreateOrLoadMoveData(
-                "HeavyPunch", "heavy_punch", damage: 10, knockback: 8f,
-                startup: 13, active: 4, recovery: 21,
-                description: "Slow, hard-hitting punch. High damage, large knockback.");
-
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
             BuildGround();
@@ -49,11 +44,11 @@ namespace RiftArena.EditorTools
 
             Fighter p1Fighter = BuildFighter(
                 name: "PlayerOne", isPlayerOne: true, spawnX: -3f,
-                lightPunch: lightPunch, heavyPunch: heavyPunch);
+                lightPunch: lightPunch);
 
             Fighter p2Fighter = BuildFighter(
                 name: "PlayerTwo", isPlayerOne: false, spawnX: 3f,
-                lightPunch: lightPunch, heavyPunch: heavyPunch);
+                lightPunch: lightPunch);
 
             WireOpponents(p1Fighter, p2Fighter);
 
@@ -117,6 +112,7 @@ namespace RiftArena.EditorTools
             ground.name = "Ground";
             ground.transform.position = Vector3.zero;
             ground.transform.localScale = new Vector3(4f, 1f, 4f); // 40x40 units
+            ApplyColor(ground, new Color(0.5f, 0.5f, 0.5f));
         }
 
         private static void BuildWalls()
@@ -131,10 +127,23 @@ namespace RiftArena.EditorTools
             wall.name = name;
             wall.transform.position = position;
             wall.transform.localScale = new Vector3(1f, 4f, 10f);
+            ApplyColor(wall, new Color(0.35f, 0.35f, 0.35f));
 
             // Purely a visual bound for the play space - no collision for MVP1.
             var collider = wall.GetComponent<BoxCollider>();
             if (collider != null) Object.DestroyImmediate(collider);
+        }
+
+        // GameObject.CreatePrimitive assigns Unity's built-in Default-Material, whose
+        // Standard shader renders magenta under URP (this project's active pipeline).
+        // Explicitly assigning a URP/Lit material keeps the grey-box scene visible.
+        private static void ApplyColor(GameObject go, Color color)
+        {
+            Renderer renderer = go.GetComponent<Renderer>();
+            if (renderer == null) return;
+
+            Shader shader = Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard");
+            renderer.sharedMaterial = new Material(shader) { color = color };
         }
 
         private static void BuildLight()
@@ -146,11 +155,12 @@ namespace RiftArena.EditorTools
             lightGO.transform.rotation = Quaternion.Euler(50f, -30f, 0f);
         }
 
-        private static Fighter BuildFighter(string name, bool isPlayerOne, float spawnX, MoveData lightPunch, MoveData heavyPunch)
+        private static Fighter BuildFighter(string name, bool isPlayerOne, float spawnX, MoveData lightPunch)
         {
             GameObject go = GameObject.CreatePrimitive(PrimitiveType.Capsule);
             go.name = name;
             go.transform.position = new Vector3(spawnX, 1f, 0f);
+            ApplyColor(go, isPlayerOne ? new Color(0.2f, 0.7f, 1f) : new Color(1f, 0.3f, 0.3f));
 
             Rigidbody rb = go.AddComponent<Rigidbody>();
             rb.mass = 1f;
@@ -189,7 +199,6 @@ namespace RiftArena.EditorTools
             so.FindProperty("minZ").floatValue = -4f;
             so.FindProperty("maxZ").floatValue = 4f;
             so.FindProperty("lightPunchMove").objectReferenceValue = lightPunch;
-            so.FindProperty("heavyPunchMove").objectReferenceValue = heavyPunch;
             so.FindProperty("hitbox").objectReferenceValue = hitbox;
             so.FindProperty("hurtbox").objectReferenceValue = hurtbox;
             so.FindProperty("health").objectReferenceValue = health;
@@ -244,7 +253,7 @@ namespace RiftArena.EditorTools
             scaler.referenceResolution = new Vector2(1920, 1080);
             canvasGO.AddComponent<GraphicRaycaster>();
 
-            if (Object.FindFirstObjectByType<EventSystem>() == null)
+            if (Object.FindAnyObjectByType<EventSystem>() == null)
             {
                 GameObject eventSystemGO = new GameObject("EventSystem");
                 eventSystemGO.AddComponent<EventSystem>();

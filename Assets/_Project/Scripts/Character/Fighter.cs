@@ -17,7 +17,7 @@ namespace RiftArena.Character
     public class Fighter : MonoBehaviour
     {
         [Header("Player Identity")]
-        [Tooltip("If true, uses the production Player 1 scheme (arrows/W/A). If false, uses the DEBUG-ONLY Player 2 local stand-in scheme (J/L/I/U/O).")]
+        [Tooltip("If true, uses PlayerOneInputReader. If false, uses the DEBUG-ONLY PlayerTwoDebugInputReader local stand-in. Both currently read the same WASD/Space/J/K scheme.")]
         [SerializeField] private bool isPlayerOne = true;
 
         [Header("Movement")]
@@ -33,7 +33,6 @@ namespace RiftArena.Character
 
         [Header("Combat Wiring")]
         [SerializeField] private MoveData lightPunchMove;
-        [SerializeField] private MoveData heavyPunchMove;
         [SerializeField] private HitboxComponent hitbox;
         [SerializeField] private HurtboxComponent hurtbox;
         [SerializeField] private HealthComponent health;
@@ -43,6 +42,10 @@ namespace RiftArena.Character
 
         [Tooltip("The opposing character. Used only to orient the hitbox toward them and for the debug facing flip - no gameplay rules here.")]
         [SerializeField] private Transform opponent;
+
+        [Header("Animation")]
+        [SerializeField] private Animator animator;
+        public Animator Animator => animator;
 
         private Rigidbody body;
         private StateMachine stateMachine;
@@ -56,6 +59,7 @@ namespace RiftArena.Character
         private WalkState walkState;
         private JumpState jumpState;
         private AttackState attackState;
+        private BlockState blockState;
         private DeadState deadState;
 
         public Rigidbody Body => body;
@@ -65,18 +69,15 @@ namespace RiftArena.Character
         public float JumpVelocity => jumpVelocity;
         public float GroundY => groundY;
         public MoveData LightPunchMove => lightPunchMove;
-        public MoveData HeavyPunchMove => heavyPunchMove;
         public HitboxComponent Hitbox => hitbox;
+        public HurtboxComponent Hurtbox => hurtbox;
         public HealthComponent Health => health;
-
-        [Header("Animation")]
-        [SerializeField] private Animator animator;
-        public Animator Animator => animator;
 
         public IdleState IdleState => idleState;
         public WalkState WalkState => walkState;
         public JumpState JumpState => jumpState;
         public AttackState AttackState => attackState;
+        public BlockState BlockState => blockState;
         public DeadState DeadState => deadState;
 
         public bool IsGrounded => transform.position.y <= groundY + 0.01f && body.linearVelocity.y <= 0.01f;
@@ -113,9 +114,20 @@ namespace RiftArena.Character
             walkState = new WalkState(this);
             jumpState = new JumpState(this);
             attackState = new AttackState(this);
+            blockState = new BlockState(this);
             deadState = new DeadState(this);
 
             stateMachine.ChangeState(idleState);
+
+            if (opponent != null)
+                {
+                    Collider myCollider = GetComponent<Collider>();
+                    Collider opponentCollider = opponent.GetComponent<Collider>();
+                    if (myCollider != null && opponentCollider != null)
+                    {
+                        Physics.IgnoreCollision(myCollider, opponentCollider, true);
+                    }
+                }
 
             if (health != null)
             {
@@ -162,7 +174,7 @@ namespace RiftArena.Character
                 stateMachine.Tick();
             }
 
-           // Rotate the whole character to face the opponent every frame — full 360°
+            // Rotate the whole character to face the opponent every frame — full 360°
             // facing (not just left/right), so the hitbox naturally rotates along with
             // the model instead of needing a separate flip.
             if (opponent != null)

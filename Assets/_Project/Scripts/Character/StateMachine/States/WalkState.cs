@@ -14,7 +14,7 @@ namespace RiftArena.Character.States
 
         public void Enter()
         {
-            fighter.Animator.CrossFade("Walk", 0.1f); 
+            fighter.Animator.CrossFade("Walk", 0.1f);
         }
 
         public void Tick()
@@ -28,10 +28,9 @@ namespace RiftArena.Character.States
                 return;
             }
 
-            if (input.HeavyPunchPressed)
+            if (input.BlockPressed)
             {
-                fighter.AttackState.SetMove(fighter.HeavyPunchMove);
-                fighter.Machine.ChangeState(fighter.AttackState);
+                fighter.Machine.ChangeState(fighter.BlockState);
                 return;
             }
 

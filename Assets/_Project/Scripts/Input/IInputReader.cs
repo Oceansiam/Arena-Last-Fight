@@ -19,8 +19,8 @@ namespace RiftArena.Input
         /// <summary>True on the physics frame Light Punch was pressed down.</summary>
         bool LightPunchPressed { get; }
 
-        /// <summary>True on the physics frame Heavy Punch was pressed down.</summary>
-        bool HeavyPunchPressed { get; }
+        /// <summary>True on the physics frame Block was pressed down.</summary>
+        bool BlockPressed { get; }
 
         /// <summary>
         /// Called once per FixedUpdate by the owning CharacterController, before any
