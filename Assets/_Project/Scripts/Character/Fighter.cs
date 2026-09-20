@@ -162,14 +162,19 @@ namespace RiftArena.Character
                 stateMachine.Tick();
             }
 
-            // Face the hitbox toward the opponent. Pure positional bookkeeping, not a
-            // gameplay rule, so it's fine to live in the coordinator.
-            if (opponent != null && hitbox != null)
+           // Rotate the whole character to face the opponent every frame — full 360°
+            // facing (not just left/right), so the hitbox naturally rotates along with
+            // the model instead of needing a separate flip.
+            if (opponent != null)
             {
-                bool facingRight = opponent.position.x >= transform.position.x;
-                Vector3 local = hitbox.transform.localPosition;
-                local.x = facingRight ? hitboxBaseLocalX : -hitboxBaseLocalX;
-                hitbox.transform.localPosition = local;
+                Vector3 toOpponent = opponent.position - transform.position;
+                toOpponent.y = 0f;
+                if (toOpponent.sqrMagnitude > 0.0001f)
+                {
+                    Quaternion targetRotation = Quaternion.LookRotation(toOpponent);
+                    Quaternion smoothed = Quaternion.RotateTowards(transform.rotation, targetRotation, 720f * Time.fixedDeltaTime);
+                    body.MoveRotation(smoothed);
+                }
             }
 
             // Keep the character inside the ring rectangle regardless of how it got
