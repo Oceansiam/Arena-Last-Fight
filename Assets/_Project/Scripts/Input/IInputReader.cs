@@ -13,19 +13,33 @@ namespace RiftArena.Input
         /// <summary>-1 = moving backward (-Z), 0 = idle, 1 = moving forward (+Z).</summary>
         float MoveAxisForward { get; }
 
-        /// <summary>True on the physics frame the jump button was pressed down.</summary>
+        /// <summary>
+        /// True since the last ConsumeFrame() if the jump button was pressed down at any
+        /// point during that window - latched rather than a raw single-frame read, so a
+        /// press landing between two FixedUpdate steps is never missed (see Sample()).
+        /// </summary>
         bool JumpPressed { get; }
 
-        /// <summary>True on the physics frame Light Punch was pressed down.</summary>
+        /// <summary>Latched Light Punch press - see JumpPressed for why this is latched.</summary>
         bool LightPunchPressed { get; }
 
-        /// <summary>True on the physics frame Block was pressed down.</summary>
+        /// <summary>Latched Block press - see JumpPressed for why this is latched.</summary>
         bool BlockPressed { get; }
 
         /// <summary>
-        /// Called once per FixedUpdate by the owning CharacterController, before any
-        /// of the properties above are read, so "pressed this frame" edges are correct.
+        /// Called once per rendered frame (Update, not FixedUpdate) by the owning
+        /// Fighter. Movement axes are simply re-read every call; button presses are
+        /// OR-latched into the *Pressed properties so a GetKeyDown edge that lands on a
+        /// render frame with no matching FixedUpdate isn't lost before the state machine
+        /// gets to see it.
         /// </summary>
-        void Tick();
+        void Sample();
+
+        /// <summary>
+        /// Called once per FixedUpdate by the owning Fighter, after the state machine has
+        /// read this frame's *Pressed flags, to clear the latches before the next
+        /// Sample() window starts.
+        /// </summary>
+        void ConsumeFrame();
     }
 }

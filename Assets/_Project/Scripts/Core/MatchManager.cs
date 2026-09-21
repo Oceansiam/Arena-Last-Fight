@@ -10,7 +10,7 @@ namespace RiftArena.Core
     /// <summary>
     /// Small end-of-match glue: watches both HealthComponents, and when either hits
     /// zero, freezes both characters' input, shows a centered "PLAYER X WINS" label,
-    /// then reloads the current scene after a short delay to reset for the next bout.
+    /// then returns to the main menu after a short delay.
     /// No round timer in MVP1 - explicitly out of scope.
     /// </summary>
     public class MatchManager : MonoBehaviour
@@ -21,6 +21,7 @@ namespace RiftArena.Core
         [SerializeField] private Fighter playerTwoFighter;
         [SerializeField] private Text winnerText;
         [SerializeField] private float restartDelaySeconds = 2f;
+        [SerializeField] private string mainMenuSceneName = "MainMenu";
 
         private bool matchOver;
 
@@ -69,7 +70,7 @@ namespace RiftArena.Core
         private IEnumerator ReloadAfterDelay()
         {
             yield return new WaitForSeconds(restartDelaySeconds);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(mainMenuSceneName);
         }
     }
 }

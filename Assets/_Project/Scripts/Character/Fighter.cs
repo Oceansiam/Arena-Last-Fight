@@ -17,7 +17,7 @@ namespace RiftArena.Character
     public class Fighter : MonoBehaviour
     {
         [Header("Player Identity")]
-        [Tooltip("If true, uses PlayerOneInputReader. If false, uses the DEBUG-ONLY PlayerTwoDebugInputReader local stand-in. Both currently read the same WASD/Space/J/K scheme.")]
+        [Tooltip("If true, uses PlayerOneInputReader (WASD/Space/V/B). If false, uses the DEBUG-ONLY PlayerTwoDebugInputReader local stand-in (Arrows/RightShift/J/K).")]
         [SerializeField] private bool isPlayerOne = true;
 
         [Header("Movement")]
@@ -47,11 +47,17 @@ namespace RiftArena.Character
         [SerializeField] private Animator animator;
         public Animator Animator => animator;
 
+        [Header("Audio")]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip attackEffortClip;
+        [SerializeField] private AudioClip damageGruntClip;
+        public AudioClip AttackEffortClip => attackEffortClip;
+        public AudioClip DamageGruntClip => damageGruntClip;
+
         private Rigidbody body;
         private StateMachine stateMachine;
         private IInputReader inputReader;
         private float groundY;
-        private float hitboxBaseLocalX;
         private bool frozen;
 
         // States (one instance each, reused - avoids per-frame allocation).
@@ -82,10 +88,17 @@ namespace RiftArena.Character
 
         public bool IsGrounded => transform.position.y <= groundY + 0.01f && body.linearVelocity.y <= 0.01f;
 
+        /// <summary>Plays a one-shot SFX on this character's own AudioSource (attack effort, damage grunt, hit/block impact, ...).</summary>
+        public void PlaySfx(AudioClip clip)
+        {
+            if (audioSource != null && clip != null) audioSource.PlayOneShot(clip);
+        }
+
         private void Awake()
         {
             body = GetComponent<Rigidbody>();
             if (health == null) health = GetComponent<HealthComponent>();
+            if (audioSource == null) audioSource = GetComponent<AudioSource>();
 
             // Rotation stays locked (characters never tip over); X/Z are both free now
             // so the ring supports full ground-plane movement, clamped in FixedUpdate.
@@ -97,8 +110,6 @@ namespace RiftArena.Character
 
             if (hitbox != null)
             {
-                hitboxBaseLocalX = Mathf.Abs(hitbox.transform.localPosition.x);
-
                 // Re-apply regardless of whether this was wired at edit time via
                 // SetTargetHurtbox (HitboxComponent's own target field is intentionally
                 // not serialized, so this is the one place that's guaranteed to run).
@@ -119,19 +130,27 @@ namespace RiftArena.Character
 
             stateMachine.ChangeState(idleState);
 
-            if (opponent != null)
-                {
-                    Collider myCollider = GetComponent<Collider>();
-                    Collider opponentCollider = opponent.GetComponent<Collider>();
-                    if (myCollider != null && opponentCollider != null)
-                    {
-                        Physics.IgnoreCollision(myCollider, opponentCollider, true);
-                    }
-                }
-
             if (health != null)
             {
                 health.OnDeath += HandleOwnDeath;
+            }
+
+            // Without this, the two fighters' own body colliders physically push each
+            // other around (jitter/knockback fighting the intended combat knockback)
+            // whenever they walk into one another. Hit detection doesn't rely on physics
+            // trigger callbacks (HitboxComponent polls bounds overlap manually), so
+            // ignoring collision here doesn't affect combat.
+            if (opponent != null)
+            {
+                Collider[] myColliders = GetComponents<Collider>();
+                Collider[] opponentColliders = opponent.GetComponents<Collider>();
+                foreach (Collider mine in myColliders)
+                {
+                    foreach (Collider theirs in opponentColliders)
+                    {
+                        Physics.IgnoreCollision(mine, theirs, true);
+                    }
+                }
             }
         }
 
@@ -166,12 +185,23 @@ namespace RiftArena.Character
             stateMachine.ChangeState(deadState);
         }
 
+        private void Update()
+        {
+            // Sampled every rendered frame (not FixedUpdate) so a GetKeyDown edge never
+            // lands in a render frame with no corresponding physics step and gets missed
+            // - see IInputReader.Sample(). FixedUpdate below consumes and clears it.
+            if (!frozen)
+            {
+                inputReader.Sample();
+            }
+        }
+
         private void FixedUpdate()
         {
             if (!frozen)
             {
-                inputReader.Tick();
                 stateMachine.Tick();
+                inputReader.ConsumeFrame();
             }
 
             // Rotate the whole character to face the opponent every frame — full 360°

@@ -3,12 +3,12 @@ using UnityEngine;
 namespace RiftArena.Input
 {
     /// <summary>
-    /// Production control scheme, shared by both players now that each will read
-    /// input on their own local machine once network play (MVP1.5) is wired up:
+    /// Player One's local control scheme (separate from Player Two so both can be
+    /// tested on one keyboard):
     ///   W / S = move forward / back (Z axis)
     ///   A / D = move left / right (X axis)
     ///   Space = jump
-    ///   J = Light Punch, K = Block
+    ///   V = Light Punch, B = Block
     /// </summary>
     public class PlayerOneInputReader : IInputReader
     {
@@ -18,7 +18,7 @@ namespace RiftArena.Input
         public bool LightPunchPressed { get; private set; }
         public bool BlockPressed { get; private set; }
 
-        public void Tick()
+        public void Sample()
         {
             float axis = 0f;
             if (UnityEngine.Input.GetKey(KeyCode.A)) axis -= 1f;
@@ -30,9 +30,19 @@ namespace RiftArena.Input
             if (UnityEngine.Input.GetKey(KeyCode.W)) axisForward += 1f;
             MoveAxisForward = axisForward;
 
-            JumpPressed = UnityEngine.Input.GetKeyDown(KeyCode.Space);
-            LightPunchPressed = UnityEngine.Input.GetKeyDown(KeyCode.J);
-            BlockPressed = UnityEngine.Input.GetKeyDown(KeyCode.K);
+            // OR-latch: a GetKeyDown edge on a render frame that falls between two
+            // FixedUpdate steps must not be overwritten back to false by a later Sample()
+            // call in the same window before FixedUpdate ever sees it.
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Space)) JumpPressed = true;
+            if (UnityEngine.Input.GetKeyDown(KeyCode.V)) LightPunchPressed = true;
+            if (UnityEngine.Input.GetKeyDown(KeyCode.B)) BlockPressed = true;
+        }
+
+        public void ConsumeFrame()
+        {
+            JumpPressed = false;
+            LightPunchPressed = false;
+            BlockPressed = false;
         }
     }
 }

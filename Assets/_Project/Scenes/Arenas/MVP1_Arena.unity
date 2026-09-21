@@ -373,9 +373,9 @@ RectTransform:
   - {fileID: 752851270}
   m_Father: {fileID: 730590545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 160, y: -40}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -160, y: 90}
   m_SizeDelta: {x: 280, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &251157362
@@ -476,9 +476,9 @@ RectTransform:
   - {fileID: 1879071292}
   m_Father: {fileID: 730590545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -160, y: -40}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -160, y: 50}
   m_SizeDelta: {x: 280, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &370519042
@@ -667,6 +667,16 @@ Material:
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!1 &586456318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e21cd83ba25643aa8317db59ce66f8d, type: 3}
+  m_PrefabInstance: {fileID: 2079057191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &706858874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 801f58037d2c54c558c5046200c5c69c, type: 3}
+  m_PrefabInstance: {fileID: 1999039354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &730590544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,11 +1124,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RiftArena.Camera.CombatCamera
   playerOne: {fileID: 1708921222}
   playerTwo: {fileID: 1445107958}
-  heightOffset: 1.6
-  minDollyZ: 6
-  maxDollyZ: 14
+  heightOffset: 5
+  backOffset: 4
+  minDolly: 4
+  maxDolly: 9
   separationToDollyFactor: 0.6
-  baseDollyZ: 6
+  baseDolly: 4
+  lookHeightOffset: 1
+  positionSmoothTime: 0.15
 --- !u!81 &907355580
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1186,13 +1199,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907355578}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.6, z: -6}
+  m_LocalRotation: {x: -0, y: 0.7336869, z: -0, w: 0.67948776}
+  m_LocalPosition: {x: -0.02, y: 4.39, z: -0.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 94.393, z: 0}
 --- !u!114 &907355583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,7 +1277,7 @@ Transform:
   m_GameObject: {fileID: 909473477}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1544,6 +1557,135 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1275733181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275733183}
+  - component: {fileID: 1275733182}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1275733182
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275733181}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 5a27636e6ba9d49c4ac5917f45873106, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.538
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1275733183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275733181}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1403290120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1616,6 +1758,7 @@ GameObject:
   - component: {fileID: 1445107960}
   - component: {fileID: 1445107957}
   - component: {fileID: 1445107956}
+  - component: {fileID: 1445107964}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Untagged
@@ -1649,6 +1792,9 @@ MonoBehaviour:
   targetHurtbox: {fileID: 1708921223}
   opponent: {fileID: 1708921222}
   animator: {fileID: 2079057192}
+  audioSource: {fileID: 1445107964}
+  attackEffortClip: {fileID: 8300000, guid: a8b96f412488e4ba78fa63bedc5cc85f, type: 3}
+  damageGruntClip: {fileID: 8300000, guid: b2eed7cb5c7f04f1b82df6dd7a395296, type: 3}
 --- !u!114 &1445107957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,8 +1809,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RiftArena.Combat.HurtboxComponent
   health: {fileID: 0}
   body: {fileID: 0}
+  fighter: {fileID: 0}
   knockbackVelocityPerUnit: 1
   blockedDamageMultiplier: 0.2
+  hitImpactClip: {fileID: 8300000, guid: 770de96c07de941ec8815e6e2a977146, type: 3}
+  blockedImpactClip: {fileID: 8300000, guid: f4f36cb4d6d3c4b2cad3bd81451654c7, type: 3}
 --- !u!4 &1445107958
 Transform:
   m_ObjectHideFlags: 0
@@ -1766,6 +1915,103 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &1445107964
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445107955}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1550172309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,6 +2533,7 @@ GameObject:
   - component: {fileID: 1708921226}
   - component: {fileID: 1708921223}
   - component: {fileID: 1708921224}
+  - component: {fileID: 1708921230}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: Untagged
@@ -2325,8 +2572,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RiftArena.Combat.HurtboxComponent
   health: {fileID: 0}
   body: {fileID: 0}
+  fighter: {fileID: 0}
   knockbackVelocityPerUnit: 1
   blockedDamageMultiplier: 0.2
+  hitImpactClip: {fileID: 8300000, guid: 770de96c07de941ec8815e6e2a977146, type: 3}
+  blockedImpactClip: {fileID: 8300000, guid: f4f36cb4d6d3c4b2cad3bd81451654c7, type: 3}
 --- !u!114 &1708921224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,6 +2603,9 @@ MonoBehaviour:
   targetHurtbox: {fileID: 1445107957}
   opponent: {fileID: 1445107958}
   animator: {fileID: 1999039356}
+  audioSource: {fileID: 1708921230}
+  attackEffortClip: {fileID: 8300000, guid: a8b96f412488e4ba78fa63bedc5cc85f, type: 3}
+  damageGruntClip: {fileID: 8300000, guid: b2eed7cb5c7f04f1b82df6dd7a395296, type: 3}
 --- !u!114 &1708921225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2437,6 +2690,103 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &1708921230
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708921221}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1727055095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,7 +2848,7 @@ Transform:
   m_GameObject: {fileID: 1727055095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2718,6 +3068,7 @@ MonoBehaviour:
   playerTwoFighter: {fileID: 1445107956}
   winnerText: {fileID: 236368324}
   restartDelaySeconds: 2
+  mainMenuSceneName: MainMenu
 --- !u!4 &1960126402
 Transform:
   m_ObjectHideFlags: 0
@@ -2747,7 +3098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 801f58037d2c54c558c5046200c5c69c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1107223
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 801f58037d2c54c558c5046200c5c69c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2812,7 +3163,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 801f58037d2c54c558c5046200c5c69c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1999039357}
   m_SourcePrefab: {fileID: 100100000, guid: 801f58037d2c54c558c5046200c5c69c, type: 3}
 --- !u!4 &1999039355 stripped
 Transform:
@@ -2824,6 +3178,23 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 801f58037d2c54c558c5046200c5c69c, type: 3}
   m_PrefabInstance: {fileID: 1999039354}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1999039357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706858874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1986418f8676423fb201d4a8ff5617f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RiftArena.Combat.HitFlash
+  health: {fileID: 1708921225}
+  hurtbox: {fileID: 0}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  blockFlashColor: {r: 0, g: 1, b: 1, a: 1}
+  flashDuration: 0.35
 --- !u!1001 &2079057191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2887,7 +3258,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e21cd83ba25643aa8317db59ce66f8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2079057194}
   m_SourcePrefab: {fileID: 100100000, guid: 4e21cd83ba25643aa8317db59ce66f8d, type: 3}
 --- !u!95 &2079057192 stripped
 Animator:
@@ -2899,6 +3273,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4e21cd83ba25643aa8317db59ce66f8d, type: 3}
   m_PrefabInstance: {fileID: 2079057191}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2079057194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586456318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1986418f8676423fb201d4a8ff5617f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RiftArena.Combat.HitFlash
+  health: {fileID: 1445107959}
+  hurtbox: {fileID: 0}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  blockFlashColor: {r: 0, g: 1, b: 1, a: 1}
+  flashDuration: 0.35
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2916,3 +3307,4 @@ SceneRoots:
   - {fileID: 1403290120}
   - {fileID: 991238010}
   - {fileID: 31241130}
+  - {fileID: 1275733183}

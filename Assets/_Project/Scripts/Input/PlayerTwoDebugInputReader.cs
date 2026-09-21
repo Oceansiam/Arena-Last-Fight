@@ -1,7 +1,5 @@
 using UnityEngine;
 
-using UnityEngine;
-
 namespace RiftArena.Input
 {
     // DEBUG ONLY — MVP1 local testing stand-in for Player 2.
@@ -11,7 +9,7 @@ namespace RiftArena.Input
     //   Up / Down Arrow = move forward / back (Z axis)
     //   Left / Right Arrow = move left / right (X axis)
     //   Right Shift = jump
-    //   Comma = Light Punch, Period = Block
+    //   J = Light Punch, K = Block
     public class PlayerTwoDebugInputReader : IInputReader
     {
         public float MoveAxis { get; private set; }
@@ -20,7 +18,7 @@ namespace RiftArena.Input
         public bool LightPunchPressed { get; private set; }
         public bool BlockPressed { get; private set; }
 
-       public void Tick()
+        public void Sample()
         {
             float axis = 0f;
             if (UnityEngine.Input.GetKey(KeyCode.LeftArrow)) axis -= 1f;
@@ -32,9 +30,19 @@ namespace RiftArena.Input
             if (UnityEngine.Input.GetKey(KeyCode.UpArrow)) axisForward += 1f;
             MoveAxisForward = axisForward;
 
-            JumpPressed = UnityEngine.Input.GetKeyDown(KeyCode.RightShift);
-            LightPunchPressed = UnityEngine.Input.GetKeyDown(KeyCode.Comma);
-            BlockPressed = UnityEngine.Input.GetKeyDown(KeyCode.Period);
+            // OR-latch: a GetKeyDown edge on a render frame that falls between two
+            // FixedUpdate steps must not be overwritten back to false by a later Sample()
+            // call in the same window before FixedUpdate ever sees it.
+            if (UnityEngine.Input.GetKeyDown(KeyCode.RightShift)) JumpPressed = true;
+            if (UnityEngine.Input.GetKeyDown(KeyCode.J)) LightPunchPressed = true;
+            if (UnityEngine.Input.GetKeyDown(KeyCode.K)) BlockPressed = true;
+        }
+
+        public void ConsumeFrame()
+        {
+            JumpPressed = false;
+            LightPunchPressed = false;
+            BlockPressed = false;
         }
     }
 }

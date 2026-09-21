@@ -1,3 +1,4 @@
+using RiftArena.Character;
 using UnityEngine;
 
 namespace RiftArena.Combat
@@ -12,10 +13,15 @@ namespace RiftArena.Combat
     {
         [SerializeField] private HealthComponent health;
         [SerializeField] private Rigidbody body;
+        [SerializeField] private Fighter fighter;
         [SerializeField] private float knockbackVelocityPerUnit = 1f;
 
         [Tooltip("Damage and knockback are multiplied by this while blocking (BlockState toggles IsBlocking on/off). 0.2 = blocked hits still chip through 20% damage; 0 = full immunity.")]
         [SerializeField, Range(0f, 1f)] private float blockedDamageMultiplier = 0.2f;
+
+        [Header("Audio")]
+        [SerializeField] private AudioClip hitImpactClip;
+        [SerializeField] private AudioClip blockedImpactClip;
 
         private BoxCollider box;
 
@@ -31,6 +37,7 @@ namespace RiftArena.Combat
 
             if (health == null) health = GetComponentInParent<HealthComponent>();
             if (body == null) body = GetComponentInParent<Rigidbody>();
+            if (fighter == null) fighter = GetComponentInParent<Fighter>();
         }
 
         public void SetBlocking(bool value)
@@ -52,6 +59,12 @@ namespace RiftArena.Combat
 
             int damage = Mathf.RoundToInt(move.damage * multiplier);
             health.ApplyDamage(damage);
+
+            if (fighter != null)
+            {
+                fighter.PlaySfx(IsBlocking ? blockedImpactClip : hitImpactClip);
+                if (!IsBlocking) fighter.PlaySfx(fighter.DamageGruntClip);
+            }
 
             if (body != null)
             {

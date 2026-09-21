@@ -182,7 +182,10 @@ namespace RiftArena.EditorTools
 
             GameObject hitboxGO = new GameObject("Hitbox");
             hitboxGO.transform.SetParent(go.transform, false);
-            hitboxGO.transform.localPosition = new Vector3(0.9f, 0f, 0f);
+            // Local +Z (forward), not +X: Fighter now rotates the whole body to face the
+            // opponent via Quaternion.LookRotation, which aligns local +Z with that
+            // direction. An offset on local +X would end up pointing sideways once rotated.
+            hitboxGO.transform.localPosition = new Vector3(0f, 0f, 0.9f);
             BoxCollider hitboxCollider = hitboxGO.AddComponent<BoxCollider>();
             hitboxCollider.isTrigger = true;
             hitboxCollider.size = new Vector3(0.7f, 0.6f, 0.7f);
@@ -261,8 +264,8 @@ namespace RiftArena.EditorTools
             }
 
             Slider p1Slider = BuildHealthSlider(canvasGO.transform, "PlayerOneHealthSlider",
-                anchorMin: new Vector2(0f, 1f), anchorMax: new Vector2(0f, 1f),
-                anchoredPos: new Vector2(160f, -40f), fillColor: new Color(0.2f, 0.7f, 1f));
+                anchorMin: new Vector2(1f, 0f), anchorMax: new Vector2(1f, 0f),
+                anchoredPos: new Vector2(-160f, 90f), fillColor: new Color(0.2f, 0.7f, 1f));
             HealthBarUI p1Bar = p1Slider.GetComponent<HealthBarUI>();
             p1Bar.SetTarget(p1Fighter.Health);
             // HealthComponent.Awake() (which sets CurrentHealth = maxHealth) hasn't
@@ -272,8 +275,8 @@ namespace RiftArena.EditorTools
             p1Slider.value = 100f;
 
             Slider p2Slider = BuildHealthSlider(canvasGO.transform, "PlayerTwoHealthSlider",
-                anchorMin: new Vector2(1f, 1f), anchorMax: new Vector2(1f, 1f),
-                anchoredPos: new Vector2(-160f, -40f), fillColor: new Color(1f, 0.3f, 0.3f));
+                anchorMin: new Vector2(1f, 0f), anchorMax: new Vector2(1f, 0f),
+                anchoredPos: new Vector2(-160f, 50f), fillColor: new Color(1f, 0.3f, 0.3f));
             HealthBarUI p2Bar = p2Slider.GetComponent<HealthBarUI>();
             p2Bar.SetTarget(p2Fighter.Health);
             p2Slider.value = 100f;

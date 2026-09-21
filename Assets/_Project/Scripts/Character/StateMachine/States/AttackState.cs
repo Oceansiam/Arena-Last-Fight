@@ -52,6 +52,7 @@ namespace RiftArena.Character.States
             Debug.Log($"[Combo] hit {comboCount}: {move.id}");
 
             fighter.Animator.CrossFade("Attack", 0.05f);
+            fighter.PlaySfx(fighter.AttackEffortClip);
 
             // Attacks root the character - no movement while attacking in MVP1.
             Vector3 v = fighter.Body.linearVelocity;
