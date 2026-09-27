@@ -97,8 +97,8 @@ Assets/_Project/
 
 | Name | Role / Contributions |
 |---|---|
-| [Your name] | [e.g. animation setup, character integration, main menu, pause menu and controls overlay, input fixes, builds] |
-| [Teammate name] | [e.g. combat system and state machine, arena, audio integration, block mechanic] |
+| [Krisdipas Kongsakul] | [e.g. animation setup, character integration, main menu, pause menu and controls overlay, input fixes, builds] |
+| [TAI-AN CHEN] | [e.g. combat system and state machine, arena, audio integration, block mechanic] |
 
 ---
 
