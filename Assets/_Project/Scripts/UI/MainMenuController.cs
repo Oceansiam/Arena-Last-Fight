@@ -5,7 +5,16 @@ namespace RiftArena.UI
 {
     public class MainMenuController : MonoBehaviour
     {
-        [SerializeField] private string fightSceneName = "MVP1_Arena";
+        [SerializeField] private string fightSceneName = "CharacterSelect";
+
+        private void Update()
+        {
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Return) || UnityEngine.Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                OnStartClicked();
+            }
+        }
+
         public void OnStartClicked()
         {
             SceneManager.LoadScene(fightSceneName);

@@ -15,7 +15,7 @@ namespace RiftArena.Combat
         [SerializeField] private HealthComponent health;
         [SerializeField] private HurtboxComponent hurtbox;
         [SerializeField] private Color flashColor = Color.red;
-        [SerializeField] private Color blockFlashColor = Color.cyan;
+        [SerializeField] private Color blockFlashColor = Color.green;
         [SerializeField] private float flashDuration = 0.35f;
 
         private Renderer[] renderers;

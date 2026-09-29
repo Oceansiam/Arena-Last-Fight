@@ -7,9 +7,9 @@ Darwin version:          25.6.0
 Architecture:            arm64
 Running under Rosetta:   NO
 Available memory:        16384 MB
-Date:                    2026-09-27T16:15:55Z
+Date:                    2026-09-28T09:41:23Z
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-ocean" at "2026-09-27T16:15:55.551972Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-ocean" at "2026-09-28T09:41:23.783215Z"
 
 COMMAND LINE ARGUMENTS:
 /Applications/Unity/Hub/Editor/6000.5.3f1/Unity.app/Contents/MacOS/Unity
@@ -23,9 +23,9 @@ AssetImportWorkerHW1
 -logFile
 Logs/AssetImportWorkerHW1.log
 -srvPort
-50248
+65534
 -parentPid
-99407
+22284
 -analyticsCloudUserId
 18968450114736
 -analyticsLocalProjectId
@@ -81,7 +81,7 @@ Successfully changed project path to: /Users/ocean/Desktop/Create with Code/Aren
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
 Player connection [8366088576]  Target information:
 
-Player connection [8366088576]  * "[IP] 192.168.0.239 [Port] 0 [Flags] 2 [Guid] 739549398 [EditorId] 739549398 [Version] 1048832 [Id] OSXEditor(0,Krisdipass-Laptop.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8366088576]  * "[IP] 192.168.0.132 [Port] 0 [Flags] 2 [Guid] 4128791341 [EditorId] 4128791341 [Version] 1048832 [Id] OSXEditor(0,Krisdipass-Laptop.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
 Player connection [8366088576] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [8366088576] Host joined alternative multi-casting on [225.0.0.222:34997]...
@@ -96,8 +96,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 3.76 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 4.87 ms.
+Refreshing native plugins compatible for Editor in 2.02 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 2.81 ms.
 Initialize engine version: 6000.5.3f1 (c2eb47b3a2a9)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/6000.5.3f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/ocean/Desktop/Create with Code/Arena Last Fight/Assets
@@ -116,19 +116,19 @@ Has Float Filtering: 1
 ReadWrite Texture Tier: 2
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.3+d7ffd15
-  Session Id:              b7afa92e166e4459b5e76503264110ae
+  Session Id:              e0a57d7c85444e97936d552e47cdb042
   Correlation Id:          1720a51cc6ffa9688175ebcb82f1e329
-  External correlation Id: 2658030956188487896
+  External correlation Id: 4563634509271180317
   Machine Id:              xFRuBs6/5eCP2pOyqJhQMoCG/2E=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-ocean" (connect: 0.00s, validation: 0.00s, handshake: 0.50s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-ocean-notifications" at "2026-09-27T16:15:56.051043Z"
-[Licensing::Module] Licensing Background thread has ended after 0.50s
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-ocean" (connect: 0.00s, validation: 0.00s, handshake: 0.41s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-ocean-notifications" at "2026-09-28T09:41:24.197913Z"
+[Licensing::Module] Licensing Background thread has ended after 0.41s
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/6000.5.3f1/Unity.app/Contents/Resources/Scripting/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/6000.5.3f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = '/Applications/Unity/Hub/Editor/6000.5.3f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/6000.5.3f1/Unity.app/Contents/Resources/Scripting/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -141,7 +141,7 @@ Register platform support module: /Applications/Unity/Hub/Editor/6000.5.3f1/Play
   Type: Assigned
   Expiration: Unlimited
 Register platform support module: /Applications/Unity/Hub/Editor/6000.5.3f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.001230 seconds.
+Registered in 0.001778 seconds.
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
@@ -154,23 +154,23 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.318 seconds
+- Finished resetting the current domain, in  0.323 seconds
 Domain Reload Profiling: 648ms
-	BeginReloadAssembly (74ms)
+	BeginReloadAssembly (67ms)
 	RebuildCommonClasses (3ms)
 	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (202ms)
-		LoadAssemblies (74ms)
-		AnalyzeDomain (153ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (204ms)
+		LoadAssemblies (67ms)
+		AnalyzeDomain (154ms)
 			TypeCache.Refresh (152ms)
-				TypeCache.ScanAssembly (139ms)
-	FinalizeReload (319ms)
+				TypeCache.ScanAssembly (138ms)
+	FinalizeReload (323ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (95ms)
-			BeforeProcessingInitializeOnLoad (55ms)
-			ProcessInitializeOnLoadAttributes (60ms)
-			ProcessInitializeOnLoadMethodAttributes (53ms)
+			InitializePlatformSupportModulesInManaged (94ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (62ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Initializing Unity extensions:
 [Licensing::Client] Successfully resolved entitlement details
@@ -201,27 +201,27 @@ Native extension for OSXStandalone target not found
 [Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.959 seconds
-Domain Reload Profiling: 1637ms
-	BeginReloadAssembly (90ms)
+- Finished resetting the current domain, in  0.886 seconds
+Domain Reload Profiling: 1544ms
+	BeginReloadAssembly (98ms)
 		DisableScriptedObjects (3ms)
-		CreateAndSetChildDomain (13ms)
+		CreateAndSetChildDomain (14ms)
 	RebuildCommonClasses (6ms)
 	RebuildNativeTypeToScriptingClass (13ms)
 	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (524ms)
-		LoadAssemblies (235ms)
-		AnalyzeDomain (258ms)
-			TypeCache.Refresh (210ms)
-				TypeCache.ScanAssembly (189ms)
+	LoadAllAssembliesAndSetupDomain (495ms)
+		LoadAssemblies (218ms)
+		AnalyzeDomain (254ms)
+			TypeCache.Refresh (206ms)
+				TypeCache.ScanAssembly (187ms)
 			BuildScriptInfoCaches (42ms)
 			ResolveRequiredComponents (4ms)
-	FinalizeReload (959ms)
+	FinalizeReload (887ms)
 		SetupLoadedEditorAssemblies (0ms)
 			InitializePlatformSupportModulesInManaged (13ms)
 			BeforeProcessingInitializeOnLoad (83ms)
-			ProcessInitializeOnLoadAttributes (543ms)
-			ProcessInitializeOnLoadMethodAttributes (208ms)
+			ProcessInitializeOnLoadAttributes (490ms)
+			ProcessInitializeOnLoadMethodAttributes (190ms)
 AcceleratorClientConnectionCallback - disconnected - :0
 WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
@@ -232,23 +232,10 @@ Launching external process: /Applications/Unity/Hub/Editor/6000.5.3f1/Unity.app/
 Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
 Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
 Curl error 3: URL rejected: Error
-Unloading 7704 unused Assets / (22.9 MB). Loaded Objects now: 8589.
-Memory consumption went from 222.7 MB to 199.8 MB.
-Total: 22.864709 ms (FindLiveObjects: 0.480958 ms CreateObjectMapping: 2.122208 ms MarkObjects: 15.412375 ms  DeleteObjects: 4.848792 ms)
+Unloading 7704 unused Assets / (22.8 MB). Loaded Objects now: 8589.
+Memory consumption went from 221.9 MB to 199.2 MB.
+Total: 22.659333 ms (FindLiveObjects: 0.492042 ms CreateObjectMapping: 2.125208 ms MarkObjects: 15.614625 ms  DeleteObjects: 4.426958 ms)
 
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 68 unused Assets / (13.8 MB). Loaded Objects now: 8589.
-Memory consumption went from 214.6 MB to 200.8 MB.
-Total: 30.161917 ms (FindLiveObjects: 0.401583 ms CreateObjectMapping: 0.820750 ms MarkObjects: 27.638667 ms  DeleteObjects: 1.300875 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
@@ -256,7 +243,7 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Licensing::Client] Successfully resolved entitlement details
 Begin MonoManager ReloadAssembly
-Thread 0x171883000 may have been prematurely finalized
+Thread 0x172b47000 may have been prematurely finalized
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
@@ -277,954 +264,34 @@ Native extension for OSXStandalone target not found
 [Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.951 seconds
-Domain Reload Profiling: 1711ms
-	BeginReloadAssembly (247ms)
-		DisableScriptedObjects (12ms)
-		CreateAndSetChildDomain (86ms)
+- Finished resetting the current domain, in  0.918 seconds
+Domain Reload Profiling: 1406ms
+	BeginReloadAssembly (185ms)
+		DisableScriptedObjects (6ms)
+		CreateAndSetChildDomain (68ms)
 	RebuildCommonClasses (6ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (448ms)
-		LoadAssemblies (218ms)
-		AnalyzeDomain (203ms)
-			TypeCache.Refresh (15ms)
-			BuildScriptInfoCaches (178ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (952ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			BeforeProcessingInitializeOnLoad (95ms)
-			ProcessInitializeOnLoadAttributes (402ms)
-			ProcessInitializeOnLoadMethodAttributes (229ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7702 unused Assets / (19.3 MB). Loaded Objects now: 8632.
-Memory consumption went from 237.8 MB to 218.5 MB.
-Total: 21.555166 ms (FindLiveObjects: 0.536167 ms CreateObjectMapping: 2.036208 ms MarkObjects: 15.632542 ms  DeleteObjects: 3.349625 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Thread 0x16f9b7000 may have been prematurely finalized
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for iOS target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.965 seconds
-Domain Reload Profiling: 1490ms
-	BeginReloadAssembly (190ms)
-		DisableScriptedObjects (9ms)
-		CreateAndSetChildDomain (63ms)
-	RebuildCommonClasses (5ms)
 	RebuildNativeTypeToScriptingClass (12ms)
 	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (273ms)
-		LoadAssemblies (224ms)
+	LoadAllAssembliesAndSetupDomain (240ms)
+		LoadAssemblies (186ms)
 		AnalyzeDomain (22ms)
-			TypeCache.Refresh (9ms)
+			TypeCache.Refresh (12ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (966ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			BeforeProcessingInitializeOnLoad (85ms)
-			ProcessInitializeOnLoadAttributes (466ms)
-			ProcessInitializeOnLoadMethodAttributes (256ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7702 unused Assets / (16.9 MB). Loaded Objects now: 8634.
-Memory consumption went from 239.8 MB to 222.9 MB.
-Total: 22.261333 ms (FindLiveObjects: 0.563166 ms CreateObjectMapping: 2.266250 ms MarkObjects: 15.678167 ms  DeleteObjects: 3.753166 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 68 unused Assets / (13.8 MB). Loaded Objects now: 8634.
-Memory consumption went from 223.5 MB to 209.7 MB.
-Total: 43.660458 ms (FindLiveObjects: 0.684167 ms CreateObjectMapping: 0.951708 ms MarkObjects: 40.799667 ms  DeleteObjects: 1.221625 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-Begin MonoManager ReloadAssembly
-Thread 0x16fcdb000 may have been prematurely finalized
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for iOS target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.884 seconds
-Domain Reload Profiling: 1379ms
-	BeginReloadAssembly (155ms)
-		DisableScriptedObjects (5ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (6ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (273ms)
-		LoadAssemblies (224ms)
-		AnalyzeDomain (21ms)
-			TypeCache.Refresh (8ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (885ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			BeforeProcessingInitializeOnLoad (86ms)
-			ProcessInitializeOnLoadAttributes (376ms)
-			ProcessInitializeOnLoadMethodAttributes (260ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Preloading 1 native plugins for Editor in 2.02 ms.
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7702 unused Assets / (16.7 MB). Loaded Objects now: 8636.
-Memory consumption went from 238.6 MB to 221.9 MB.
-Total: 22.583709 ms (FindLiveObjects: 1.041583 ms CreateObjectMapping: 2.314875 ms MarkObjects: 15.563625 ms  DeleteObjects: 3.662875 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 68 unused Assets / (13.8 MB). Loaded Objects now: 8636.
-Memory consumption went from 222.4 MB to 208.5 MB.
-Total: 40.787417 ms (FindLiveObjects: 0.581583 ms CreateObjectMapping: 0.917083 ms MarkObjects: 38.037917 ms  DeleteObjects: 1.250375 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-Begin MonoManager ReloadAssembly
-Thread 0x16f4cb000 may have been prematurely finalized
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for iOS target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.045 seconds
-Domain Reload Profiling: 1544ms
-	BeginReloadAssembly (159ms)
-		DisableScriptedObjects (5ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (6ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (49ms)
-	LoadAllAssembliesAndSetupDomain (273ms)
-		LoadAssemblies (231ms)
-		AnalyzeDomain (16ms)
-			TypeCache.Refresh (8ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (1045ms)
+	FinalizeReload (918ms)
 		SetupLoadedEditorAssemblies (0ms)
 			InitializePlatformSupportModulesInManaged (14ms)
-			BeforeProcessingInitializeOnLoad (86ms)
-			ProcessInitializeOnLoadAttributes (524ms)
-			ProcessInitializeOnLoadMethodAttributes (271ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Preloading 1 native plugins for Editor in 2.16 ms.
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7702 unused Assets / (16.3 MB). Loaded Objects now: 8638.
-Memory consumption went from 237.4 MB to 221.0 MB.
-Total: 27.059583 ms (FindLiveObjects: 0.767958 ms CreateObjectMapping: 2.709667 ms MarkObjects: 18.951166 ms  DeleteObjects: 4.630083 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Thread 0x16f4cb000 may have been prematurely finalized
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for iOS target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.905 seconds
-Domain Reload Profiling: 1403ms
-	BeginReloadAssembly (166ms)
-		DisableScriptedObjects (6ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (6ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (51ms)
-	LoadAllAssembliesAndSetupDomain (264ms)
-		LoadAssemblies (217ms)
-		AnalyzeDomain (18ms)
-			TypeCache.Refresh (9ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (906ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			BeforeProcessingInitializeOnLoad (83ms)
-			ProcessInitializeOnLoadAttributes (407ms)
-			ProcessInitializeOnLoadMethodAttributes (256ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
+			BeforeProcessingInitializeOnLoad (88ms)
+			ProcessInitializeOnLoadAttributes (370ms)
+			ProcessInitializeOnLoadMethodAttributes (222ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
 WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
 Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7702 unused Assets / (16.3 MB). Loaded Objects now: 8640.
-Memory consumption went from 239.5 MB to 223.2 MB.
-Total: 22.386333 ms (FindLiveObjects: 0.655250 ms CreateObjectMapping: 2.340542 ms MarkObjects: 15.595000 ms  DeleteObjects: 3.794416 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:37:21.74642Z
-  Time since last request: 670641.0353613330517 seconds.
-  importAddress: GUID: a8b96f412488e4ba78fa63bedc5cc85f - Path: Assets/_Project/Audio/01._effort_grunt_male.wav - Importer: PreviewImporter
-Importing 'GUID: a8b96f412488e4ba78fa63bedc5cc85f - Path: Assets/_Project/Audio/01._effort_grunt_male.wav - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: a8b96f412488e4ba78fa63bedc5cc85f' -> (Import Result ID: '07650146e3b1a69e3b7b9a3dd6d0d9dc') in 0.443 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1d8bec96e0875a17ca06f5e31d7e0c20 DependenciesID=bc0abaae3a32220d6f92f70736b3f67c StaticDependenciesID=97e9f8e3671fb27c3dd9bf932424986d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:37:22.245577Z
-  Time since last request: 0.0001115 seconds.
-  importAddress: GUID: fce3bf5a5b603db45ab0048fb6ab44df - Path: Assets/Starter Assets/Sample/Environment/Art/Models/Stairs_200x100x200_Mesh.fbx - Importer: PreviewImporter
-Importing 'GUID: fce3bf5a5b603db45ab0048fb6ab44df - Path: Assets/Starter Assets/Sample/Environment/Art/Models/Stairs_200x100x200_Mesh.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: fce3bf5a5b603db45ab0048fb6ab44df' -> (Import Result ID: 'd3f17504110a75b897d123fa298a8905') in 0.425 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b53790a9b1f25e385bd205c39b80758 DependenciesID=8d2ad60b472469738de70b92bb5bcd15 StaticDependenciesID=03ed43b1229f22f635b21a9d30ace3bd 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 17
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-Begin MonoManager ReloadAssembly
-Thread 0x16f9b7000 may have been prematurely finalized
-<CFData 0x90db7f390 [0x1f4119308]>{length = 6, capacity = 6, bytes = 0x74a6cdf34579}
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for iOS target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.903 seconds
-Domain Reload Profiling: 1468ms
-	BeginReloadAssembly (225ms)
-		DisableScriptedObjects (18ms)
-		CreateAndSetChildDomain (75ms)
-	RebuildCommonClasses (6ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (56ms)
-	LoadAllAssembliesAndSetupDomain (265ms)
-		LoadAssemblies (234ms)
-		AnalyzeDomain (16ms)
-			TypeCache.Refresh (8ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (903ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			BeforeProcessingInitializeOnLoad (86ms)
-			ProcessInitializeOnLoadAttributes (406ms)
-			ProcessInitializeOnLoadMethodAttributes (251ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7702 unused Assets / (16.6 MB). Loaded Objects now: 8712.
-Memory consumption went from 249.0 MB to 232.4 MB.
-Total: 23.290875 ms (FindLiveObjects: 0.596166 ms CreateObjectMapping: 2.364959 ms MarkObjects: 16.200333 ms  DeleteObjects: 4.128917 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:15.387124Z
-  Time since last request: 712.70059858299999 seconds.
-  importAddress: GUID: c79e3c999bff54c8485d651e4ab96e46 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/Textures/water.png - Importer: PreviewImporter
-Importing 'GUID: c79e3c999bff54c8485d651e4ab96e46 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/Textures/water.png - Importer: PreviewImporter' with importer (PreviewImporter)
-[Licensing::Client] Successfully resolved entitlement details
-Imported 'GUID: c79e3c999bff54c8485d651e4ab96e46' -> (Import Result ID: 'e70e0a0eaac0fcbaebe82a52e158c88e') in 0.086 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=da468c2edb5df9824326d12dc83e1f16 DependenciesID=fd3763a31146d06a8524a5e89726dea1 StaticDependenciesID=45265ce623830ca31dba45d351df975a 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:15.516034Z
-  Time since last request: 0.002277167 seconds.
-  importAddress: GUID: af0ae2dbf3d1efb4f82af377950704a2 - Path: Assets/Starter Assets/Runtime/Mobile/UI/Images/UI_Icon_Look.png - Importer: PreviewImporter
-Importing 'GUID: af0ae2dbf3d1efb4f82af377950704a2 - Path: Assets/Starter Assets/Runtime/Mobile/UI/Images/UI_Icon_Look.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: af0ae2dbf3d1efb4f82af377950704a2' -> (Import Result ID: 'bc33440a9559f22c4f8abda3bb1c09b0') in 0.049 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee036088b80fa72edab4e090a4245135 DependenciesID=5a2b6234bca6b3c3b44d0f1b3ba2752a StaticDependenciesID=e8a4d2f21bdf6b244e033316400338ac 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:15.578805Z
-  Time since last request: 0.000816209 seconds.
-  importAddress: GUID: ec4ba40c45024462680762efb3ce2527 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-fortified-paint-gate.fbx - Importer: PreviewImporter
-Importing 'GUID: ec4ba40c45024462680762efb3ce2527 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-fortified-paint-gate.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: ec4ba40c45024462680762efb3ce2527' -> (Import Result ID: '42ec27ee0f14627e4bcab0bdc78e8e79') in 0.236 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1c4587f6f0226013368f5c85daffafc9 DependenciesID=1e9c92391d45ceeac6adf599ebed62f0 StaticDependenciesID=dc749e4b8618c4051a2c7cfbf1207aaf 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:15.827762Z
-  Time since last request: 0.00092 seconds.
-  importAddress: GUID: a3d800b099a06e0478fb790c5e79057a - Path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph - Importer: PreviewImporter
-Importing 'GUID: a3d800b099a06e0478fb790c5e79057a - Path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: a3d800b099a06e0478fb790c5e79057a' -> (Import Result ID: '0b64ac2ef1937db26673e391d8864ac0') in 1.387 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=57d76606d9352ca738f2cad6face2c53 DependenciesID=2a97b3dad01eddc2dfe9975d98cdd820 StaticDependenciesID=91a69827c456bf4a17ed10c282f604e5 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:17.226285Z
-  Time since last request: 0.000514417 seconds.
-  importAddress: GUID: 4181bfe715a83e843b7538d750dc57cc - Path: Assets/Starter Assets/TutorialInfo/Readme.asset - Importer: PreviewImporter
-Importing 'GUID: 4181bfe715a83e843b7538d750dc57cc - Path: Assets/Starter Assets/TutorialInfo/Readme.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 4181bfe715a83e843b7538d750dc57cc' -> (Import Result ID: 'e3ba3659ee4caf436c8fc12ce53c2edf') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=12fcb5e2ed0b103fce85f6150a0a9c10 DependenciesID=6e3eaa4aadaf5f42b864a0c27c353d73 StaticDependenciesID=a4c893e6f05eac4d7711841f99aa18ce 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:17.246139Z
-  Time since last request: 0.000831667 seconds.
-  importAddress: GUID: 7e3f1677bc1aead4fb8791998078dcec - Path: Assets/Starter Assets/Sample/ThirdPersonController/Playground/ReflectionProbe-2.exr - Importer: PreviewImporter
-Importing 'GUID: 7e3f1677bc1aead4fb8791998078dcec - Path: Assets/Starter Assets/Sample/ThirdPersonController/Playground/ReflectionProbe-2.exr - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 7e3f1677bc1aead4fb8791998078dcec' -> (Import Result ID: '3e574992204959961f1bd76e72889a4d') in 0.080 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c489f4a12d2cec0f15f85cd8d1bfd550 DependenciesID=4d16d5c428fd88c95bcbbc6774928d49 StaticDependenciesID=1db36f36971794947aa1d80ed647184b 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:17.33872Z
-  Time since last request: 0.000074458 seconds.
-  importAddress: GUID: a9ef32e8d7c7bb84c8730e7347b637de - Path: Assets/Starter Assets/Sample/Environment/Prefabs/Ramp_100x100x200_Prefab.prefab - Importer: PreviewImporter
-Importing 'GUID: a9ef32e8d7c7bb84c8730e7347b637de - Path: Assets/Starter Assets/Sample/Environment/Prefabs/Ramp_100x100x200_Prefab.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: a9ef32e8d7c7bb84c8730e7347b637de' -> (Import Result ID: '7eb63b01e4a390015ce15382ba046dea') in 0.958 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=35be55ffa090d262e07923c764de4019 DependenciesID=ae4b08297d142c2517301a617d61d972 StaticDependenciesID=b1695d68d21a82e4f3faf9347ff8ceb4 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 20
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:18.30909Z
-  Time since last request: 0.000251875 seconds.
-  importAddress: GUID: ece0eb0af717b422faadf213a9e0de02 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/Textures/roof.png - Importer: PreviewImporter
-Importing 'GUID: ece0eb0af717b422faadf213a9e0de02 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/Textures/roof.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: ece0eb0af717b422faadf213a9e0de02' -> (Import Result ID: '194a3545844e7e8ead01842f1fdb1390') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1cbc76fa274198512c59abb7da7e863c DependenciesID=2a5631d98eadc84dbc270aa403412d7c StaticDependenciesID=3b3ec33102b3cee7f013afa354164151 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:18.32463Z
-  Time since last request: 0.000371375 seconds.
-  importAddress: GUID: 7a7cfa1e2d8da48d88e04e1009b1c99e - Path: Assets/Animations2/X Bot@Death2.fbx - Importer: PreviewImporter
-Importing 'GUID: 7a7cfa1e2d8da48d88e04e1009b1c99e - Path: Assets/Animations2/X Bot@Death2.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 7a7cfa1e2d8da48d88e04e1009b1c99e' -> (Import Result ID: '12875092c323b46477191d7fdc522758') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c1043d80933977e60b6a1b392a9034be DependenciesID=d1bd7ca978abe640c57a1209bfd343be StaticDependenciesID=5fb328f33c3a55939f60f1cd2d87088d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:18.340276Z
-  Time since last request: 0.000408667 seconds.
-  importAddress: GUID: 7e32cdcc72ec04f7499fe3f7138a9758 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-paint-gate.fbx - Importer: PreviewImporter
-Importing 'GUID: 7e32cdcc72ec04f7499fe3f7138a9758 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-paint-gate.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 7e32cdcc72ec04f7499fe3f7138a9758' -> (Import Result ID: '508bc91ea934dc5ee90f5b6fc39b9331') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=47ed93d8322adbe97a9196bb75ba800f DependenciesID=294440c80825c5d0885b1d0fa8e1fd8f StaticDependenciesID=77112cca77956bfcb6b5eee883ef6684 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:18.3692Z
-  Time since last request: 0.000440541 seconds.
-  importAddress: GUID: f3a9694165b354653b4bb323a100fe0a - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/floor-stairs-corner-outer.fbx - Importer: PreviewImporter
-Importing 'GUID: f3a9694165b354653b4bb323a100fe0a - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/floor-stairs-corner-outer.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: f3a9694165b354653b4bb323a100fe0a' -> (Import Result ID: '0c9c933840aea894219758b5795331a0') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9cf5fb738af785840a6b8035b07856af DependenciesID=813984213a918e56908231c5a6491795 StaticDependenciesID=c920fcd5f302e7ccdf02f358185e7eff 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:18.394134Z
-  Time since last request: 0.00060825 seconds.
-  importAddress: GUID: 6fc3c4985151c4fdb950ed9e8d7a5a8b - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/battlement-corner-inner.fbx - Importer: PreviewImporter
-Importing 'GUID: 6fc3c4985151c4fdb950ed9e8d7a5a8b - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/battlement-corner-inner.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 6fc3c4985151c4fdb950ed9e8d7a5a8b' -> (Import Result ID: '7c35e6327a90bb8368f3054dad4121dc') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=196e4d43561b39ed457b542b6f8a7068 DependenciesID=05de05a3e8a8aab60926e93d5620dd4b StaticDependenciesID=6622d5b44b1aed2cf92896f35a0bb9d2 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:18.41946Z
-  Time since last request: 0.00126525 seconds.
-  importAddress: GUID: 407bc68d299748449bbf7f48ee690f8d - Path: Assets/TextMesh Pro/Shaders/TMPro.cginc - Importer: PreviewImporter
-Importing 'GUID: 407bc68d299748449bbf7f48ee690f8d - Path: Assets/TextMesh Pro/Shaders/TMPro.cginc - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 407bc68d299748449bbf7f48ee690f8d' -> (Import Result ID: '8c48cb7a38a1282672c7e5f4ec2f7e61') in 0.001 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=12e9f4bddfb0921943e6019440f780fa DependenciesID=aaf3244916c687655e894021429e65ad StaticDependenciesID=e3dab6a8b052a4aa064716365ef7d085 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:18.431415Z
-  Time since last request: 0.000319583 seconds.
-  importAddress: GUID: b1787a7070753594996dac074aee4532 - Path: Assets/Starter Assets/Runtime/SpaceRobotKyle/Models/KyleRobot.fbx - Importer: PreviewImporter
-Importing 'GUID: b1787a7070753594996dac074aee4532 - Path: Assets/Starter Assets/Runtime/SpaceRobotKyle/Models/KyleRobot.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: b1787a7070753594996dac074aee4532' -> (Import Result ID: '70c4982d1ea3313a95dd1cc8f8d244b4') in 0.832 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4cc81d3aed5c29f1618c6b8bec88498c DependenciesID=21827205bf16557f64443a3043ab05cc StaticDependenciesID=9bda3ea5e019de0ebd38f686cb6ca311 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 119
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:19.274629Z
-  Time since last request: 0.000784 seconds.
-  importAddress: GUID: ab39a304ebc3847df8d409e8406e8137 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wood-floor-quarter.fbx - Importer: PreviewImporter
-Importing 'GUID: ab39a304ebc3847df8d409e8406e8137 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wood-floor-quarter.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: ab39a304ebc3847df8d409e8406e8137' -> (Import Result ID: 'd23aa2d4f26ad163bb8d324c9468bf97') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e9536ade14bedc8db5952508e0b60e37 DependenciesID=4408709a308fa599d117a218d93f7223 StaticDependenciesID=b1ba16c4f7fc108eb1027abb94df7a80 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:19.297462Z
-  Time since last request: 0.000364083 seconds.
-  importAddress: GUID: 58502d341de2046d082c1a9d0949cf65 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/dock-side.fbx - Importer: PreviewImporter
-Importing 'GUID: 58502d341de2046d082c1a9d0949cf65 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/dock-side.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 58502d341de2046d082c1a9d0949cf65' -> (Import Result ID: 'e2bd6f9832a1d4a740a3daef135af3c0') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b8c04a571761650a309c5ddb404c0501 DependenciesID=6d3d7199f233f51f01f2cd84af75b516 StaticDependenciesID=47602eaa54b0febdcb556bcfb60d3681 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:19.329303Z
-  Time since last request: 0.000932625 seconds.
-  importAddress: GUID: ff38e7ce1e6144503bda563b0d8bbb4b - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-pane-wood.fbx - Importer: PreviewImporter
-Importing 'GUID: ff38e7ce1e6144503bda563b0d8bbb4b - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-pane-wood.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: ff38e7ce1e6144503bda563b0d8bbb4b' -> (Import Result ID: '26099d1b13b1b89fdc79d3f3679ab4d7') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=257eb16f94cda119aec1828a26d7996d DependenciesID=b17e7c1360f52806e5739f7bece08c3b StaticDependenciesID=d4a48561a4266edf0bfee85f084dc872 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:19.357379Z
-  Time since last request: 0.000776042 seconds.
-  importAddress: GUID: 79e624e6a8770a946afb866fd94b394b - Path: Assets/Starter Assets/Sample/Environment/Prefabs/Structure_Prefab.prefab - Importer: PreviewImporter
-Importing 'GUID: 79e624e6a8770a946afb866fd94b394b - Path: Assets/Starter Assets/Sample/Environment/Prefabs/Structure_Prefab.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 79e624e6a8770a946afb866fd94b394b' -> (Import Result ID: '4155c197bc19ba58dd5f16f40a16204d') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d1a9049cd17766c491c86c0780df808f DependenciesID=97660b48d08692018fd3d5605103c7f0 StaticDependenciesID=e8107dfcb39d2e25d2c67a2a2d0a8356 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 121
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:19.38053Z
-  Time since last request: 0.000547167 seconds.
-  importAddress: GUID: 69de824c280444ba0be587958821d718 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/floor-stairs.fbx - Importer: PreviewImporter
-Importing 'GUID: 69de824c280444ba0be587958821d718 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/floor-stairs.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 69de824c280444ba0be587958821d718' -> (Import Result ID: '1a0deb657fba454dde47db2b4f8952b8') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7330c448098da3e9717227b1564de950 DependenciesID=f06240c27f6517eded015b295c3229c8 StaticDependenciesID=f2df47f2c43d2825209dac3b16a8fedb 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:19.406845Z
-  Time since last request: 0.0002595 seconds.
-  importAddress: GUID: 7b09af712821347a5adbb430d2b6b46d - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-fortified-paint-half.fbx - Importer: PreviewImporter
-Importing 'GUID: 7b09af712821347a5adbb430d2b6b46d - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-fortified-paint-half.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 7b09af712821347a5adbb430d2b6b46d' -> (Import Result ID: '33eee979d36ef860e4c17849a1477bfc') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=73711d8530ac49ba7ff9721bcaa2cd08 DependenciesID=044a5caafd01d31d3777d97373fdbe7b StaticDependenciesID=91389ec1a49da855ac034b21c23471a7 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:19.436242Z
-  Time since last request: 0.000653666 seconds.
-  importAddress: GUID: 64dce48905ffd9b4293e595fa6941544 - Path: Assets/Starter Assets/Runtime/ThirdPersonController/Prefabs/PlayerArmature.prefab - Importer: PreviewImporter
-Importing 'GUID: 64dce48905ffd9b4293e595fa6941544 - Path: Assets/Starter Assets/Runtime/ThirdPersonController/Prefabs/PlayerArmature.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 64dce48905ffd9b4293e595fa6941544' -> (Import Result ID: '757c13db52ea63437edabd53d4979880') in 0.877 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ffcaa852d7cc19457c6b046cfb172da4 DependenciesID=c9518d172f32fcea3ceaadea6ec69da2 StaticDependenciesID=38ae61b958d7674f953a377267f2e23e 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 204
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.32887Z
-  Time since last request: 0.000070625 seconds.
-  importAddress: GUID: 58ce9f315287e4579a3b838763bdb162 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-gate.fbx - Importer: PreviewImporter
-Importing 'GUID: 58ce9f315287e4579a3b838763bdb162 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-gate.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 58ce9f315287e4579a3b838763bdb162' -> (Import Result ID: 'fb67fa93b6fd2679d7b20c4ae8646ea5') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=92ea571c44c0abffcf7e5caab854492d DependenciesID=ccd62e5feab06194122ac8ae445edc82 StaticDependenciesID=f6b1045cb11813954b6e0897c7e538e2 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.357012Z
-  Time since last request: 0.0002995 seconds.
-  importAddress: GUID: 648d9a9da15124550ada60ef54bc02af - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/roof.fbx - Importer: PreviewImporter
-Importing 'GUID: 648d9a9da15124550ada60ef54bc02af - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/roof.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 648d9a9da15124550ada60ef54bc02af' -> (Import Result ID: '58389aee25b92d52940b2717535f502a') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bbef2455f2c0af5da13607bfeea3b637 DependenciesID=9a0008f8fd7ae5dcef1b768d7df83eef StaticDependenciesID=3490319888e24cc9f7e1db37ae44c5df 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.388484Z
-  Time since last request: 0.000468333 seconds.
-  importAddress: GUID: f14940471dd9c4bad8b6dd2e87478c64 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/structure-poles.fbx - Importer: PreviewImporter
-Importing 'GUID: f14940471dd9c4bad8b6dd2e87478c64 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/structure-poles.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: f14940471dd9c4bad8b6dd2e87478c64' -> (Import Result ID: '66a4029aa1d6c5b51a0d7886c5cad50b') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=03201c9b7907664b9ed515ad4242c5d1 DependenciesID=c835c0738f01f7de54707bad9d1ce5f5 StaticDependenciesID=23d36640f3972cc3f775c3333fb1e518 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.411642Z
-  Time since last request: 0.000915334 seconds.
-  importAddress: GUID: 354295b147a784b3ca6e8c154d205ff6 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-paint-flat.fbx - Importer: PreviewImporter
-Importing 'GUID: 354295b147a784b3ca6e8c154d205ff6 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-paint-flat.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 354295b147a784b3ca6e8c154d205ff6' -> (Import Result ID: '59ee6d85daa4a48dfe69bee8155f89ad') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=730aeab4c1df6dac1daf55027c9a7649 DependenciesID=d7fbf17aa1ff48d3957ad8e5733894c9 StaticDependenciesID=6f2648b719d4193b4d9084febd5a020d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.440646Z
-  Time since last request: 0.000356 seconds.
-  importAddress: GUID: f0271df749728104eac22c3d897fd8ce - Path: Assets/Starter Assets/Runtime/Mobile/Prefabs/EventSystem/UI_EventSystem.prefab - Importer: PreviewImporter
-Importing 'GUID: f0271df749728104eac22c3d897fd8ce - Path: Assets/Starter Assets/Runtime/Mobile/Prefabs/EventSystem/UI_EventSystem.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: f0271df749728104eac22c3d897fd8ce' -> (Import Result ID: 'bd9e932ad1eb5bd824164336882467e9') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=54e97376fa863e86101aca4e28e91724 DependenciesID=d8e84383b7a8b381544324fcacbb8489 StaticDependenciesID=b0dfd5f25e786e71b0c6a3faf6fa7c81 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 17
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.455978Z
-  Time since last request: 0.000559791 seconds.
-  importAddress: GUID: 889da66e8fc9f451b812756f8f1b1ce2 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/floor-steps-corner-outer.fbx - Importer: PreviewImporter
-Importing 'GUID: 889da66e8fc9f451b812756f8f1b1ce2 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/floor-steps-corner-outer.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 889da66e8fc9f451b812756f8f1b1ce2' -> (Import Result ID: '48d47721030b74b604d4ed78fac6e2f6') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b2f8c0d3b79ddeef69f8c7101bad7c2 DependenciesID=6c2d66299a5d334d91d14091392e82d8 StaticDependenciesID=e9824c6bba9740a473ac5e02b59098d1 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.480128Z
-  Time since last request: 0.000283125 seconds.
-  importAddress: GUID: 3a195350d3f9e412aa96e0c6a7942ed5 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/tower-top.fbx - Importer: PreviewImporter
-Importing 'GUID: 3a195350d3f9e412aa96e0c6a7942ed5 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/tower-top.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 3a195350d3f9e412aa96e0c6a7942ed5' -> (Import Result ID: '18b006e954b3055b8df7606efc9914aa') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a0d8d111f301eec04969fbbe218f7931 DependenciesID=3699f01179de60093e2d0c3d617122bb StaticDependenciesID=fa190b1a5c4cac045f8441c3cf4c5bd8 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.507406Z
-  Time since last request: 0.000758625 seconds.
-  importAddress: GUID: 74788ee7517b24682a097a8f9eb478e7 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-pane-painted-wood-window.fbx - Importer: PreviewImporter
-Importing 'GUID: 74788ee7517b24682a097a8f9eb478e7 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-pane-painted-wood-window.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 74788ee7517b24682a097a8f9eb478e7' -> (Import Result ID: '9266e54b11644b366b563822f473577a') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=75af76ef6ad265cfaef66ccea95375bf DependenciesID=d49960d569229749549e20338a6882ea StaticDependenciesID=daa3cac43a33d174a817d15880499b50 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.537283Z
-  Time since last request: 0.0002545 seconds.
-  importAddress: GUID: 2c69a55486197410fa5f9c65fd2e0137 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/Materials/stones.mat - Importer: PreviewImporter
-Importing 'GUID: 2c69a55486197410fa5f9c65fd2e0137 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/Materials/stones.mat - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 2c69a55486197410fa5f9c65fd2e0137' -> (Import Result ID: 'cf7a3f659e3c57155131c834a2a09b48') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e1c1e34406db457da7fca01da9978ff1 DependenciesID=1cc3d8132cd6daf68e088d9ad4f1be59 StaticDependenciesID=36e6e871a801c59b0948573c08042e5c 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.554156Z
-  Time since last request: 0.000398917 seconds.
-  importAddress: GUID: 1a18ea23d5b854fcbb33447bace963ec - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-fortified.fbx - Importer: PreviewImporter
-Importing 'GUID: 1a18ea23d5b854fcbb33447bace963ec - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall-fortified.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 1a18ea23d5b854fcbb33447bace963ec' -> (Import Result ID: '9faa73d35d785613729de1223fdb0ed8') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c353e9c087d8fc4add43cd72f6c03dc3 DependenciesID=67503963347ddc400831ad56e77621ff StaticDependenciesID=3964d0c52a272394cf7725b0b6ccb4ff 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:20.584316Z
-  Time since last request: 0.000299084 seconds.
-  importAddress: GUID: 124c112a6e8f1a54e8b0870e881b56d8 - Path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph - Importer: PreviewImporter
-Importing 'GUID: 124c112a6e8f1a54e8b0870e881b56d8 - Path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 124c112a6e8f1a54e8b0870e881b56d8' -> (Import Result ID: '098b37303eca613b42976e2f5915fb07') in 0.525 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7f720d0966209c55045ef2e8909a98a3 DependenciesID=6e111532ba55295d1a462003ec213b2a StaticDependenciesID=7aab84df83babdf50ecc870143afcf93 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.120229Z
-  Time since last request: 0.000125667 seconds.
-  importAddress: GUID: c49ef192a57a5af42a728163b2468c8a - Path: Assets/Starter Assets/Sample/FirstPersonController/Playground/ReflectionProbe-2.exr - Importer: PreviewImporter
-Importing 'GUID: c49ef192a57a5af42a728163b2468c8a - Path: Assets/Starter Assets/Sample/FirstPersonController/Playground/ReflectionProbe-2.exr - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: c49ef192a57a5af42a728163b2468c8a' -> (Import Result ID: '41be3b3339c07732939e551199c05907') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=452aeaaf2749fa03c4e36fbbb0eccdb9 DependenciesID=08a4509b7f101c950d1ffd9056f21d0a StaticDependenciesID=12a0f7484314131bdc2205c3f44aa67c 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.137721Z
-  Time since last request: 0.000272958 seconds.
-  importAddress: GUID: 6a9753fad0f654519a368b0536c381cc - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/roof-side-corner-inner.fbx - Importer: PreviewImporter
-Importing 'GUID: 6a9753fad0f654519a368b0536c381cc - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/roof-side-corner-inner.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 6a9753fad0f654519a368b0536c381cc' -> (Import Result ID: '3ca5567262d9fb186202925d5a313a2f') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8e45d04eaf247bc5d03b4229d0b5f266 DependenciesID=8920f67137ea7dceb50546ead541b66a StaticDependenciesID=09ba11c7ceedb0ba7621da285731bd9c 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 14
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.166294Z
-  Time since last request: 0.000526375 seconds.
-  importAddress: GUID: 54ce04a48dee44b3bbc4e4d70c04f888 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/roof-edge.fbx - Importer: PreviewImporter
-Importing 'GUID: 54ce04a48dee44b3bbc4e4d70c04f888 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/roof-edge.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 54ce04a48dee44b3bbc4e4d70c04f888' -> (Import Result ID: '95856446f43cdd975c550207bb2f4f0e') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=afa15366d810dc76cf5ac2379a750789 DependenciesID=f65db904cc9daf42d3308929ad34c20d StaticDependenciesID=5327a8b1b49cc3ceb7dd13fbf55a5c5e 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.196967Z
-  Time since last request: 0.000262166 seconds.
-  importAddress: GUID: d356c823c2ada4a3aa021fca29d48bb6 - Path: Assets/Animations2/X Bot@Draw A Great Sword 1.fbx - Importer: PreviewImporter
-Importing 'GUID: d356c823c2ada4a3aa021fca29d48bb6 - Path: Assets/Animations2/X Bot@Draw A Great Sword 1.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: d356c823c2ada4a3aa021fca29d48bb6' -> (Import Result ID: 'c27af6c0a383657b4ac0e598bb837656') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0b9b8e5ab722f73354d5b2074733c882 DependenciesID=ad0971094b7f0aa4d22a676006170c66 StaticDependenciesID=af25553ec645d855246457220416e489 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.21162Z
-  Time since last request: 0.000448291 seconds.
-  importAddress: GUID: c488544df7b754be9821c98265d290aa - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wood-floor.fbx - Importer: PreviewImporter
-Importing 'GUID: c488544df7b754be9821c98265d290aa - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wood-floor.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: c488544df7b754be9821c98265d290aa' -> (Import Result ID: 'b4586e3df8c916c85e8b3ed15ebbf5b9') in 0.009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=08033995adb750e8d097a3ff78e3e25a DependenciesID=ca03adcb10f96515d484a619a183dade StaticDependenciesID=24254f1d50881d78af40b8f6eb5dc0ab 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.232213Z
-  Time since last request: 0.000242875 seconds.
-  importAddress: GUID: 3997e2241185407d80309a82f9148466 - Path: Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc - Importer: PreviewImporter
-Importing 'GUID: 3997e2241185407d80309a82f9148466 - Path: Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 3997e2241185407d80309a82f9148466' -> (Import Result ID: '028adcb52c0ab9117b077184e374283a') in 0.001 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=017612521a9e259a68a3a185a9913b0d DependenciesID=3a5ef2f7df2a3291fd220093f53f402e StaticDependenciesID=f97429006f67a3c2d05837d00b09951c 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.244572Z
-  Time since last request: 0.000316875 seconds.
-  importAddress: GUID: d254865fe9f124a8996c0646ab1a5f15 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/structure.fbx - Importer: PreviewImporter
-Importing 'GUID: d254865fe9f124a8996c0646ab1a5f15 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/structure.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: d254865fe9f124a8996c0646ab1a5f15' -> (Import Result ID: '58e45ce655d83f60606d1ecf78bd13f2') in 0.009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=16a8e2f03a103b4ba90a00cdc4018a15 DependenciesID=c531a9d13842ee34bc6616290fd510f6 StaticDependenciesID=d1044f320f55dfad18fa9f88f1370a84 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.264314Z
-  Time since last request: 0.0005635 seconds.
-  importAddress: GUID: e140ec438c5bf443191c8961162ccbbb - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall.fbx - Importer: PreviewImporter
-Importing 'GUID: e140ec438c5bf443191c8961162ccbbb - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/wall.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: e140ec438c5bf443191c8961162ccbbb' -> (Import Result ID: 'ab6860a408bc5e6900084653c320bdf1') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=df99857c81de764b34764b16aac1037e DependenciesID=798fe48b1bac19bc941915683df84ac4 StaticDependenciesID=4c8354c085fa51c8c19cf471f9ad7f78 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.287922Z
-  Time since last request: 0.000286 seconds.
-  importAddress: GUID: 14326064f806144c488008e7443671e8 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/structure-cross.fbx - Importer: PreviewImporter
-Importing 'GUID: 14326064f806144c488008e7443671e8 - Path: Assets/_Project/Arts/Environment/RetroFantasyKit/FBX format/structure-cross.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 14326064f806144c488008e7443671e8' -> (Import Result ID: '91655982c93f076873b8b6fd86b0dfe7') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ed00a41ca9a7d57a8aa6a87e481802a DependenciesID=062d12e35681d982055aca0265883a3c StaticDependenciesID=e42a4b3ca41f52ae4c50548f2046d0e6 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:49:21.30912Z
-  Time since last request: 0.000257542 seconds.
-  importAddress: GUID: 4589b87b8508f6e48b8fddb385924b16 - Path: Assets/Starter Assets/Sample/Environment/Art/Materials/URP_HDRP_ShaderGraph/ShaderGraphGrid_01_Mat.mat - Importer: PreviewImporter
-Importing 'GUID: 4589b87b8508f6e48b8fddb385924b16 - Path: Assets/Starter Assets/Sample/Environment/Art/Materials/URP_HDRP_ShaderGraph/ShaderGraphGrid_01_Mat.mat - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 4589b87b8508f6e48b8fddb385924b16' -> (Import Result ID: '87b1d1aaa61d1ae01dcf1e674cec8788') in 1.067 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=63cefaef7c6fec1ed34a72a5ca692087 DependenciesID=5cb06458433d06b7619e3d9e3413c7aa StaticDependenciesID=6b565e33cb4180148b5415e59b4846e6 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-Begin MonoManager ReloadAssembly
-Thread 0x16f9b7000 may have been prematurely finalized
-ADTM: Control thread waiting for realtime thread timed out, have to lock...
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for iOS target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.185 seconds
-Domain Reload Profiling: 2874ms
-	BeginReloadAssembly (1276ms)
-		DisableScriptedObjects (21ms)
-		CreateAndSetChildDomain (1120ms)
-	RebuildCommonClasses (7ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (330ms)
-		LoadAssemblies (293ms)
-		AnalyzeDomain (22ms)
-			TypeCache.Refresh (9ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1186ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (17ms)
-			BeforeProcessingInitializeOnLoad (96ms)
-			ProcessInitializeOnLoadAttributes (548ms)
-			ProcessInitializeOnLoadMethodAttributes (334ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Preloading 1 native plugins for Editor in 2.25 ms.
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7702 unused Assets / (17.1 MB). Loaded Objects now: 8740.
-Memory consumption went from 254.2 MB to 237.0 MB.
-Total: 23.988917 ms (FindLiveObjects: 0.825083 ms CreateObjectMapping: 2.456917 ms MarkObjects: 15.692708 ms  DeleteObjects: 5.013417 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:58:38.142669Z
-  Time since last request: 555.75390804100005 seconds.
-  importAddress: GUID: bfd030f4cef764fa180d24c92bb1284b - Path: Assets/Animations2/X Bot@Great Sword Casting.fbx - Importer: PreviewImporter
-Importing 'GUID: bfd030f4cef764fa180d24c92bb1284b - Path: Assets/Animations2/X Bot@Great Sword Casting.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: bfd030f4cef764fa180d24c92bb1284b' -> (Import Result ID: '8b7722849d7be5df1fc71eb402e3e41f') in 0.321 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1703dbd9e03bf36d3e7c0a93ab1bd4f2 DependenciesID=374ce3672ebe072c69d708d86c01749d StaticDependenciesID=f155cd47d095a4fd5b3691cf73a3f952 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 146
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:58:42.947148Z
-  Time since last request: 4.444525208 seconds.
-  importAddress: GUID: c6dc62700fa06274b9608a9fce8ed21b - Path: Assets/Starter Assets/Runtime/ThirdPersonController/Character/Textures/Armature_Arms_AlbedoTransparency.tif - Importer: PreviewImporter
-Importing 'GUID: c6dc62700fa06274b9608a9fce8ed21b - Path: Assets/Starter Assets/Runtime/ThirdPersonController/Character/Textures/Armature_Arms_AlbedoTransparency.tif - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: c6dc62700fa06274b9608a9fce8ed21b' -> (Import Result ID: 'c4bdff3d5f4a43fbd37ed92d3145e90f') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c43172d041850bcdda5527eb48232515 DependenciesID=399ea4285743d1c1cf0dfb93258f3ed1 StaticDependenciesID=6eb660e7919780e157e1db074e54011d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:58:42.970597Z
-  Time since last request: 0.000699458 seconds.
-  importAddress: GUID: 6751ce1a4611b3940812c13a6847d94f - Path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo - URP.mat - Importer: PreviewImporter
-Importing 'GUID: 6751ce1a4611b3940812c13a6847d94f - Path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo - URP.mat - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 6751ce1a4611b3940812c13a6847d94f' -> (Import Result ID: '6d61e280d38860271d016c7c0ef95250') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=054f12414ee01a08101cd6ce2cffa0fa DependenciesID=6e064e79e9733de100931cea3ffaa36c StaticDependenciesID=d751f525a9330cb10479c356c5a41003 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:58:42.993835Z
-  Time since last request: 0.000782 seconds.
-  importAddress: GUID: f2dcf029949142e28b974630369c8b4e - Path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Drop Shadow.mat - Importer: PreviewImporter
-Importing 'GUID: f2dcf029949142e28b974630369c8b4e - Path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Drop Shadow.mat - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: f2dcf029949142e28b974630369c8b4e' -> (Import Result ID: '3e23044a34a9e9be4b0f98bb9135cc62') in 0.197 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=035aa8e3801c882ea893201de5d83b8e DependenciesID=b23f950e7c90e36a38ba987b8503706e StaticDependenciesID=afd561b1134c41be6d7740091a6ead5d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:58:43.203184Z
-  Time since last request: 0.001218417 seconds.
-  importAddress: GUID: 7b846d8f536f007498c941069487ce81 - Path: Assets/Starter Assets/Sample/Environment/Prefabs/Box_350x250x200_Prefab.prefab - Importer: PreviewImporter
-Importing 'GUID: 7b846d8f536f007498c941069487ce81 - Path: Assets/Starter Assets/Sample/Environment/Prefabs/Box_350x250x200_Prefab.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 7b846d8f536f007498c941069487ce81' -> (Import Result ID: '4a41c21bfa97148145b969cd99a9e43f') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=948c78d961ede988345f363ef176d071 DependenciesID=962c34df331193f6af53fd2d52f1ac37 StaticDependenciesID=79622194d9828c37e2aa674aae67d950 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 13
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:58:43.229109Z
-  Time since last request: 0.000651334 seconds.
-  importAddress: GUID: 4e21cd83ba25643aa8317db59ce66f8d - Path: Assets/Animations/Jump (1).fbx - Importer: PreviewImporter
-Importing 'GUID: 4e21cd83ba25643aa8317db59ce66f8d - Path: Assets/Animations/Jump (1).fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-MaterialLocation.External is obsolete. External Material Location is no longer supported. (Assets/Animations/Jump (1).fbx)
-Imported 'GUID: 4e21cd83ba25643aa8317db59ce66f8d' -> (Import Result ID: 'c924f64d7ab22e7edcb219e3aafed25a') in 0.037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28e6b1502eb7b4aa291b16eb41baf152 DependenciesID=0334331076493ecedcd9b0aaa5db06a1 StaticDependenciesID=2d24213285ed1543ad30232c7f2dce97 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 164
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:58:43.278537Z
-  Time since last request: 0.000602 seconds.
-  importAddress: GUID: 479a66fa4b094512a62b0a8e553ad95a - Path: Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Blue to Purple - Vertical.asset - Importer: PreviewImporter
-Importing 'GUID: 479a66fa4b094512a62b0a8e553ad95a - Path: Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Blue to Purple - Vertical.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 479a66fa4b094512a62b0a8e553ad95a' -> (Import Result ID: 'dce71225b38fd59cf5f50cde715d16c8') in 0.001 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8a1cd27c2e649ddbd5e509b613d6b2a8 DependenciesID=b9b727095f7b0e60b0ea4fa525562fbf StaticDependenciesID=31da2f73d69a747df2bb72aed6729f6b 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-09-27T16:58:43.291086Z
-  Time since last request: 0.000702792 seconds.
-  importAddress: GUID: fdbe19fc2f08d4e8390ecfb1fb56389e - Path: Assets/Animations/Body Block.fbx - Importer: PreviewImporter
-Importing 'GUID: fdbe19fc2f08d4e8390ecfb1fb56389e - Path: Assets/Animations/Body Block.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: fdbe19fc2f08d4e8390ecfb1fb56389e' -> (Import Result ID: '65c4861ae4db6426d32154767bdeec23') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2b90fa7336ffc6e09da6f94b4117a07a DependenciesID=1050f64777f845f028b6f0c62e8b6535 StaticDependenciesID=dbce6e3d547166f7ba82dea58e165368 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 163
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 68 unused Assets / (13.8 MB). Loaded Objects now: 8810.
-Memory consumption went from 243.6 MB to 229.7 MB.
-Total: 23.948334 ms (FindLiveObjects: 0.536458 ms CreateObjectMapping: 0.874667 ms MarkObjects: 21.312083 ms  DeleteObjects: 1.222792 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-Begin MonoManager ReloadAssembly
-Thread 0x16f9b7000 may have been prematurely finalized
-ADTM: Control thread waiting for realtime thread timed out, have to lock...
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for iOS target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.942 seconds
-Domain Reload Profiling: 2549ms
-	BeginReloadAssembly (1207ms)
-		DisableScriptedObjects (14ms)
-		CreateAndSetChildDomain (1091ms)
-	RebuildCommonClasses (6ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (322ms)
-		LoadAssemblies (275ms)
-		AnalyzeDomain (17ms)
-			TypeCache.Refresh (9ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (942ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			BeforeProcessingInitializeOnLoad (92ms)
-			ProcessInitializeOnLoadAttributes (407ms)
-			ProcessInitializeOnLoadMethodAttributes (261ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7702 unused Assets / (17.1 MB). Loaded Objects now: 8765.
-Memory consumption went from 258.0 MB to 240.9 MB.
-Total: 23.698875 ms (FindLiveObjects: 0.666708 ms CreateObjectMapping: 2.427042 ms MarkObjects: 15.794916 ms  DeleteObjects: 4.809834 ms)
+Unloading 7702 unused Assets / (19.8 MB). Loaded Objects now: 8632.
+Memory consumption went from 236.7 MB to 216.8 MB.
+Total: 25.593625 ms (FindLiveObjects: 0.577750 ms CreateObjectMapping: 2.045833 ms MarkObjects: 19.517375 ms  DeleteObjects: 3.449125 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
@@ -1234,14 +301,15 @@ WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wirefr
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Preloading 1 native plugins for Editor in 2.84 ms.
+Preloading 1 native plugins for Editor in 2.07 ms.
 Unloading 68 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 68 unused Assets / (13.8 MB). Loaded Objects now: 8765.
-Memory consumption went from 241.5 MB to 227.7 MB.
-Total: 78.166500 ms (FindLiveObjects: 1.191250 ms CreateObjectMapping: 2.033625 ms MarkObjects: 72.355292 ms  DeleteObjects: 2.584084 ms)
+Unloading 68 unused Assets / (13.8 MB). Loaded Objects now: 8632.
+Memory consumption went from 219.7 MB to 205.9 MB.
+Total: 43.092167 ms (FindLiveObjects: 0.889042 ms CreateObjectMapping: 1.061625 ms MarkObjects: 39.390750 ms  DeleteObjects: 1.655375 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 Editor requested this worker to shutdown with reason: Editor is closing down
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 AcceleratorClientConnectionCallback - disconnected - :0
 AssetImportWorker is now disconnected from the server
 Process exiting

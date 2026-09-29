@@ -1,5 +1,6 @@
 using RiftArena.Character.FSM;
 using RiftArena.Character.States;
+using RiftArena.CharacterSelect;
 using RiftArena.Combat;
 using RiftArena.Input;
 using UnityEngine;
@@ -46,6 +47,10 @@ namespace RiftArena.Character
         [Header("Animation")]
         [SerializeField] private Animator animator;
         public Animator Animator => animator;
+
+        [Header("Character Select")]
+        [Tooltip("Same roster asset the CharacterSelect scene cycles through. If CharacterSelection has a pick for this player, the pre-placed Model child below is swapped out for it in Awake. Leave empty (or skip select) to just use whatever model is already on the Fighter.")]
+        [SerializeField] private CharacterRoster characterRoster;
 
         [Header("Audio")]
         [SerializeField] private AudioSource audioSource;
@@ -94,11 +99,57 @@ namespace RiftArena.Character
             if (audioSource != null && clip != null) audioSource.PlayOneShot(clip);
         }
 
+        /// <summary>
+        /// If the player went through CharacterSelect, swaps the pre-placed "Model" child
+        /// for whichever character they picked. No-ops (keeping the scene's own model)
+        /// when there's no selection - e.g. opening MVP1_Arena directly to test.
+        /// </summary>
+        private void ApplySelectedCharacterModel()
+        {
+            if (characterRoster == null || !CharacterSelection.HasSelection) return;
+
+            int index = isPlayerOne ? CharacterSelection.PlayerOneCharacterIndex : CharacterSelection.PlayerTwoCharacterIndex;
+            if (index < 0 || characterRoster.characters == null || index >= characterRoster.characters.Length) return;
+
+            CharacterDefinition def = characterRoster.characters[index];
+            if (def == null || def.modelPrefab == null) return;
+
+            Transform oldModel = transform.Find("Model");
+            Vector3 localPos = oldModel != null ? oldModel.localPosition : Vector3.zero;
+            if (oldModel != null) Destroy(oldModel.gameObject);
+
+            GameObject newModel = Instantiate(def.modelPrefab, transform);
+            newModel.name = "Model";
+            newModel.transform.localPosition = localPos;
+            newModel.transform.localRotation = Quaternion.identity;
+            newModel.transform.localScale = Vector3.one;
+
+            Animator newAnimator = newModel.GetComponent<Animator>();
+            if (newAnimator != null)
+            {
+                newAnimator.applyRootMotion = false;
+                if (def.animatorController != null) newAnimator.runtimeAnimatorController = def.animatorController;
+                animator = newAnimator;
+            }
+
+            // Roster model prefabs (Maria/Paladin) don't ship with their own HitFlash -
+            // the scene's pre-placed "Model" did, and it just got destroyed above. Without
+            // this, going through Character Select silently loses the hit/block flash for
+            // every match. HitFlash.Awake() resolves health/hurtbox via
+            // GetComponentInParent on its own, so no manual wiring is needed here.
+            if (newModel.GetComponentInChildren<HitFlash>() == null)
+            {
+                newModel.AddComponent<HitFlash>();
+            }
+        }
+
         private void Awake()
         {
             body = GetComponent<Rigidbody>();
             if (health == null) health = GetComponent<HealthComponent>();
             if (audioSource == null) audioSource = GetComponent<AudioSource>();
+
+            ApplySelectedCharacterModel();
 
             // Rotation stays locked (characters never tip over); X/Z are both free now
             // so the ring supports full ground-plane movement, clamped in FixedUpdate.
